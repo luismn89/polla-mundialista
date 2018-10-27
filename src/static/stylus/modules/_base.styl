@@ -1,0 +1,182 @@
+@import './lib/bootstrap-grid.styl'
+@import './modules/_fonts.styl'
+@import './modules/_variables.styl'
+@import './modules/_icons.styl'
+@import './modules/_footer.styl'
+
+body
+    background $white
+    display flex
+    justify-content center
+    flex-direction column
+    font-size 14px
+    -ms-flex-direction column
+    overflow-x hidden
+a
+    text-decoration none
+ul
+    list-style none
+    margin 0
+    padding 0
+figure
+    img
+        width 100%
+header
+    width 100%
+
+//class
+.background-red
+    background $red-btn
+.background-gray-dark
+    background $gray-dark
+.background-mustard-light
+    background $yellow-mustard-light
+.background-green-light
+    background $green-olive
+.background-blue-facebook
+    background $blue-facebook
+.background-blue-twitter
+    background $blue-twitter
+.background-red-gplus
+    background $red-gplus
+.text-blue-facebook
+    color $blue-facebook
+.text-blue-twitter
+    color $blue-twitter
+.text-green-olive
+    color $green-olive
+.text-red
+    color $red-text
+.text-red-gplus
+    color $red-gplus
+.text-white
+    color $white
+.text-gray-light
+    color $gray-light
+.text-mustard
+    color $yellow-mustard
+.text-mustard-light
+    color $yellow-mustard-light
+.text-gray-dark
+    color $gray-dark
+.text-black
+    color black
+.text-uppercase
+    text-transform uppercase
+.text-strong
+    font-weight bold
+.btn-disable
+    background $gray-disabled
+    color $gray-light2
+.red-line
+    background $red-btn
+.white-line
+    background white
+.white-line,
+.red-line
+    border 1px solid transparent
+    display block
+    height 1px
+.ribbon-winner,
+.ribbon-wrong,
+.btn-mobile
+    display block
+    font-family $roboto_cond_bold
+    font-size 17px
+    padding 14px 0
+    width 100%
+.ribbon-winner
+    background $green-olive
+.ribbon-wrong
+    background $red-btn
+.layer-shadow
+    bottom 0
+    left 0
+    right 0
+    top 0
+.layer-shadow
+    background linear-gradient(rgba(255,255,255,0), rgba(0, 0, 0, 0.8))
+    position absolute
+    z-index 2
+.social-buttons
+    align-items center
+    display flex
+    display -ms-flexbox
+    font-size 15px
+    margin 0 auto
+    justify-content space-between
+    width 85px
+    -ms-flex-align center
+    -ms-flex-pack justify
+    a.icon-facebook
+        &:focus
+            color $blue-facebook
+    a.icon-twitter
+        font-size 17px
+        &:focus
+            color $blue-twitter
+    a.icon-gplus
+        font-size 21px
+    a:hover,
+    a:focus
+        text-decoration none
+.accordion
+    width 100%
+    .tab-accordion
+        margin-bottom 1px
+        overflow hidden
+        position relative
+        width 100%
+        input[type="checkbox"]
+            position absolute
+            opacity 0
+            z-index -1
+            &:checked ~ .tab-accordion-content
+                max-height initial
+            &:checked + label::after
+                transform rotate(180deg)
+        label
+            border-bottom 1px solid $gray-disabled
+            cursor pointer
+            display block
+            font-weight bold
+            line-height 3
+            padding 0
+            position relative
+            &::after
+                content url('/dist/img/arrow.png')
+                position absolute
+                right 0
+                top 0
+                display block
+                width 12px
+                height 3em
+                line-height 3
+                text-align center
+                -webkit-transition all .35s
+                -o-transition all .35s
+                transition all .35
+        .tab-accordion-content
+            max-height 0
+            overflow hidden
+            -webkit-transition max-height .35s
+            -o-transition max-height .35s
+            transition max-height .35s
+        &:not(:first-child) label
+            border-top 1px solid $gray-disabled
+.bodyNoScroll
+    overflow hidden
+.wrapper
+    margin-top 80px
+@media screen and (min-width: 768px)
+    .accordion
+        display none
+@media screen and (min-width: 960px)
+    .wrapper
+        position relative
+        margin 0 auto
+        width 935px
+        margin-top 100px
+@media screen and (min-width: 1200px)
+    .score-user
+        display none !important

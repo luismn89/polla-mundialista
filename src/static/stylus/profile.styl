@@ -1,0 +1,141 @@
+@import './modules/_base.styl'
+
+.score-user
+    border-bottom 1px solid $gray-light3
+    display block
+    text-align center
+    h3
+        font-family $rajdhani_semibold
+        font-size 17px
+        margin 14px auto 15px auto
+    .sec-text-description
+        p
+            font-family $rajdhani_medium
+            margin 0
+            margin-top 20px
+            margin-bottom 15px
+            span
+                font-family $rajdhani_bold
+                &.mob,
+                &.desk
+                    font-family $rajdhani_medium
+        .desk
+                display none
+.title-section 
+    margin-bottom 20px
+    margin-top 30px
+    h2
+        font-family $rajdhani_bold
+        font-size 24px
+        line-height 24px
+        margin 0
+        text-align center
+.red-line
+    margin 0 auto
+    width 50px
+.title-subsection
+    background $gray-bsocial-menu
+    font-family $roboto_bold
+    font-weight 700
+    padding 10px 0
+    margin 28px 0
+    text-align center
+    p
+        margin 0
+.paragraph
+    display flex
+    display -ms-flexbox
+    padding-left 10px
+    padding-right 10px
+    span 
+        font-size 16px
+        font-weight bold
+    p
+        font-family $roboto_regular
+        font-size 14px
+        line-height 18px
+        margin 0
+        margin-left 4px
+        span 
+            font-family $roboto_medium
+            font-size 14px
+            font-weight 500
+.sec-list-pronostics
+    .paragraph 
+        p
+            font-family $roboto_bold
+        &:not(:last-child)
+            margin-bottom 25px
+.list-path
+    display none
+@media screen and (min-width: 568px)
+    .score-user
+        .sec-text-description
+            p
+                display flex
+                display -ms-flexbox
+                justify-content center
+                -ms-flex-pack center
+                span
+                    &:first-child
+                        margin-right 5px
+                        margin-left 5px
+                    &:last-child
+                        margin-left 5px
+            .mob
+                display none
+            .desk
+                display inline
+@media screen and (min-width: 768px)
+    .paragraph
+        padding 0 70px
+        div
+            display flex
+            display -ms-flexbox
+            justify-content space-between
+            width 100%
+            -ms-flex-pack justify
+    .score-user
+        .sec-text-description
+            margin-bottom 27px
+    // footer 
+    //     position absolute
+    //     bottom 0
+    //     width 100%
+@media screen and (min-width: 1200px)
+    .list-path
+        display flex
+        display -ms-flexbox
+        justify-content space-between
+        border-bottom 1px solid $gray-bsocial-menu
+        border-top 1px solid $gray-bsocial-menu
+        padding 15px 0
+        margin-top 22px
+        -ms-flex-pack justify
+        div:first-child
+            label
+                color #999
+                font-family $rajdhani_medium
+                font-size 14px
+                &.current-section
+                    color $red-btn
+                    font-family $rajdhani_bold
+            span
+                color #999
+                display inline
+                margin 0 5px
+        div:last-child
+            p
+                font-family $rajdhani_medium
+                display flex
+                display -ms-flexbox
+                margin 0
+                span
+                    font-family $rajdhani_bold
+                    &:first-child
+                        margin-right 5px
+                        margin-left 5px
+                    &:last-child
+                        margin-left 5px
+    .sec-history
+        margin-bottom 120px

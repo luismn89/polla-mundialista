@@ -1,0 +1,220 @@
+.class-navbar
+    align-items center
+    background $black
+    border-bottom 3px solid $yellow-gold
+    box-shadow 0 3px 5px $gray-light
+    display flex
+    display -ms-flexbox
+    justify-content center
+    padding-left 10px
+    padding-right 10px
+    width 100%
+    -ms-flex-pack center
+    -ms-flex-align center
+    .class-btn-menu
+        font-size 28px
+        padding 7px 10px 7px 8px
+        text-align center
+        &:focus,
+        &:hover
+            color $white
+            text-decoration none
+    div
+        padding 0
+    div.container-logo-nav
+        margin 5px 28px
+        figure
+            display flex
+            display -ms-flexbox
+            height 58px
+            margin 5px auto
+            padding 0
+            width 158px
+            img
+                height 100%
+                padding 0
+    div:last-child
+        text-align right
+.class-btn-profile
+    border 2px solid $gray-medium
+    border-radius 50%
+    font-size 20px
+    padding 7px 8px 8px
+.nav-desk
+    display none
+.menu
+    background white
+    display none
+    position absolute
+    left 0
+    top 0
+    width 300px
+    z-index 6
+    .user-profile
+        align-items center
+        display flex
+        display -ms-flexbox
+        padding 35px 10px
+        -ms-flex-align center
+        .icon-user-o
+            color $gray-user-menu
+            border-color $gray-user-menu
+        .data-user 
+            line-height 20px
+            margin-left 10px
+            p
+                margin 0
+                &:first-child
+                    font-family $rajdhani_bold
+                    font-size 20px
+                    font-weight 700
+                &:last-child
+                    font-family $rajdhani_medium
+                    font-size 14px
+                    font-weight 500
+    .sec-options
+        padding 7px 0
+        width 100%
+        .option.selected
+            background $gray-selected-menu
+            color $red-text
+        .option
+            align-items center
+            display flex
+            display -ms-flexbox
+            font-size 19px
+            font-weight bold
+            line-height 24px
+            padding 15px 18px
+            -ms-flex-align center
+            span 
+                font-size  24px
+            label 
+                font-family $rajdhani_semibold
+                margin-left 15px
+    .sec-social
+        border-bottom 1px solid $gray-bsocial-menu
+        border-top 1px solid $gray-bsocial-menu
+        display flex
+        display -ms-flexbox
+        flex-direction row
+        padding 19px 20px
+        -ms-flex-direction row
+        .follow
+            font-family $rajdhani_medium
+            font-size 17px
+            line-height 24px
+            margin-right 20px
+.links-specials
+    display flex
+    display -ms-flexbox
+    justify-content space-between
+    -ms-flex-pack justify
+    padding 10px
+    a:first-child
+        .logo-special
+            width 195px
+            margin-left -20px
+    a:last-child
+        .logo-special
+            width 100px
+@media screen and (max-height: 567px)
+    .menu
+        overflow-y auto
+        height 100%
+@media screen and (min-width: 768px)
+    .box-text-slider
+        margin-top 100px
+    .menu
+        bottom 0
+@media screen and (min-width: 1200px)
+    .nav-mobile
+        display none
+    .nav-desk
+        display block
+    .class-navbar
+        height 78px
+        justify-content initial 
+        -ms-flex-pack initial
+        .wrapper-nav
+            align-items center
+            display flex
+            display -ms-flexbox
+            margin 0 auto
+            width 1280px
+            -ms-flex-align center
+            .col-lg-2,
+            .col-lg-4,
+            .col-lg-5
+                float none
+            .container-logo-nav
+                margin 5px 0px
+            .sec-options
+                .list-options
+                    align-items center
+                    display flex
+                    display -ms-flexbox
+                    -ms-flex-align center
+                    .option
+                        color $white
+                        font-family $rajdhani_semibold
+                        font-size 16px
+                        margin 0 15px
+                        a
+                            padding-bottom 20px
+                            padding-top 20px
+                            &:hover
+                                text-decoration none
+                                color $white
+            .links-specials
+                .logo-special
+                    align-items center
+                    display flex
+                    display -ms-flexbox
+                    height 93px
+                    margin-left 0
+                    width auto
+                    -ms-flex-align center
+            .buttons-login-register
+                display flex
+                display -ms-flexbox
+                // display none
+                float none
+                justify-content space-between
+                margin-left 30px
+                -ms-flex-pack justify
+                .btn
+                    border 1px solid $white
+                    font-family $roboto_regular
+                    font-size 11px
+                    margin 0 -5px
+                    &:first-child
+                        padding 15px 36px
+                    &:last-child
+                        padding 15px 40px
+                    &:hover
+                        color white
+                        text-decoration none
+            .profile-points
+                display none
+                border-left 1px solid $gray-circle
+                margin-left 30px
+                padding 11px 0
+                padding-left 20px
+                .btn-profile
+                    font-family $roboto_regular
+                    font-size 12px
+                    span 
+                        font-family $roboto_bold
+                .btn-points
+                    background $red-btn
+                    font-family $roboto_bold
+                    font-size 18px
+                    margin-left 20px
+                    padding 11px 47px
+                    span 
+                        font-family $roboto_regular
+                        font-size 14px
+                a:hover
+                    color white
+                    text-decoration none

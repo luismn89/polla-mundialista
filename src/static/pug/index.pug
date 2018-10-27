@@ -1,0 +1,7 @@
+extends ./partials/_base.pug
+block styles
+    link(href="/dist/css/main.css", rel="stylesheet")
+block content
+  div#app
+  script(src="/dist/build.js")
+  script(src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit", async, defer)
