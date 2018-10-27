@@ -1,0 +1,52 @@
+{
+  "name": "polla",
+  "description": "A Vue.js project",
+  "version": "1.0.0",
+  "author": "luismn89 <luismn89@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build-index:pug": "pug ./src/static/pug/index.pug --out ./ --pretty",
+    "build:pug": "pug ./src/static/pug/ --out dist/html/ --pretty --watch",
+    "build:stylus": "stylus -w --compress ./dist/css -o ./dist/css ./src/static/stylus",
+    "build-styl:main": "stylus --compress ../src/static/polla/css -o ../src/static/polla/css ./src/static/stylus/main.styl",
+    "dev": "cross-env NODE_ENV=development PUBLIC_PATH_ENV=local webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production PUBLIC_PATH_ENV=prod webpack --progress --hide-modules"
+  },
+  "dependencies": {
+    "js-cookie": "2.2.0",
+    "superagent": "3.8.3",
+    "vue": "2.5.16",
+    "vue-agile": "^0.3.7",
+    "vue-carousel": "^0.7.3",
+    "vue-recaptcha": "1.1.1",
+    "vue-router": "3.0.1",
+    "vuex": "3.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-stage-3": "6.24.1",
+    "cross-env": "5.0.5",
+    "css-loader": "0.28.7",
+    "es6-promise": "4.2.4",
+    "file-loader": "1.1.4",
+    "pug": "2.0.0-rc.4",
+    "pug-cli": "1.0.0-alpha6",
+    "pug-plain-loader": "1.0.0",
+    "raw-loader": "0.5.1",
+    "stylus": "0.54.5",
+    "stylus-loader": "3.0.2",
+    "vue-loader": "13.0.5",
+    "vue-template-compiler": "2.5.16",
+    "vuenut": "^0.2.2",
+    "webpack": "3.6.0",
+    "webpack-dev-server": "2.9.1"
+  }
+}
