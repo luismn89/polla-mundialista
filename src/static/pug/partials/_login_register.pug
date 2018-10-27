@@ -1,0 +1,83 @@
+div.modal#modal_login
+    div.container-modal
+        figure
+            img(src="/dist/img/logopolla.png")
+        p Para participar inicia sesión
+        form#form-login.form(action="#", method="POST")
+            .field-input
+                span.icon-mail.text-red
+                div.input-text
+                    label.title-input.text-red.text-uppercase correo electrónico
+                    input(type="email", placeholder="Tu correo electrónico")
+            .field-input
+                span.icon-lock.text-red
+                div.input-text
+                    label.title-input.text-red.text-uppercase contraseña
+                    input(type="password", placeholder="Tu constraseña")
+            input(type="submit", value="iniciar sesión").background-red.btn-mobile.text-white.text-uppercase
+        div.other-sesion
+            //- p o iniciar sesión con:
+            //- div.btns-social
+            //-     a(href="#").icon-facebook.text-white.background-blue-facebook
+            //-     a(href="#").icon-gplus.text-white.background-red-gplus
+            div.link-forgive-register
+                a(href="#").text-red Olvidé mi contraseña
+                p 
+                    |¿No tienes una cuenta? 
+                    a(href="#", title="title").text-red Regístrate
+        a.background-red.text-white.icon-close
+div.modal#modal_register
+    div.container-modal
+        figure
+            img(src="/dist/img/logopolla.png")
+        p Para participar registrate o inicia sesión
+        form#form-register.form(action="#", method="POST")
+            .field-input
+                span.icon-user-o.text-red
+                div.input-text
+                    label.title-input.text-red.text-uppercase nombres
+                    input(type="text", placeholder="Tus nombres")
+            .field-input
+                span.icon-user-o.text-red
+                div.input-text
+                    label.title-input.text-red.text-uppercase apellidos
+                    input(type="text", placeholder="Tus apellidos")
+            .field-input
+                span.icon-mail.text-red
+                div.input-text
+                    label.title-input.text-red.text-uppercase correo electrónico
+                    input(type="email", placeholder="Tu correo electrónico")
+            .field-input
+                span.icon-lock.text-red
+                div.input-text
+                    label.title-input.text-red.text-uppercase contraseña
+                    input(type="password", placeholder="Tu constraseña")
+            .field-input
+                span.icon-lock.text-red
+                div.input-text
+                    label.title-input.text-red.text-uppercase confirmar contraseña
+                    input(type="password", placeholder="Repite tu contraseña")
+            .field-input.checkbox
+                label.input-checks
+                    | Deseo registrarme al newsletter.
+                    input(type="checkbox")
+                    span.checkmark
+                label.input-checks
+                    | Acepto los 
+                    a(href="#", title="title") Términos y Condiciones
+                    |  | 
+                    a(href="#", title="title") Política de Privacidad
+                    input(type="checkbox")
+                    span.checkmark
+            input(type="submit", value="registrarme").background-red.btn-mobile.text-white.text-uppercase
+        div.other-sesion
+            p o registrarme con:
+            div.btns-social
+                a(href="#").icon-facebook.text-white.background-blue-facebook
+                a(href="#").icon-gplus.text-white.background-red-gplus
+            div.link-forgive-register
+                a(href="#").text-red Olvidé mi contraseña
+                p 
+                    |¿Ya tienes cuenta? 
+                    a(href="#", title="title").text-red Inicia sesión
+        a.background-red.text-white.icon-close

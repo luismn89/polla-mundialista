@@ -1,0 +1,125 @@
+@import './modules/_base.styl'
+
+.score-user
+    display block
+    text-align center
+    h3
+        font-family $rajdhani_semibold
+        font-size 17px
+        margin 14px auto 15px auto
+.title-section 
+    border-top 1px solid $gray-light3
+    padding-bottom 20px
+    padding-top 25px
+    h2
+        font-family $rajdhani_bold
+        font-size 24px
+        line-height 24px
+        margin 0
+        text-align center
+.red-line
+    margin 0 auto
+    width 50px
+.sec-description
+    margin-top 30px
+    padding-bottom 30px
+.paragraph
+    display flex
+    display -ms-flexbox
+    padding-left 10px
+    padding-right 10px
+    span 
+        font-size 16px
+        font-weight bold
+    p
+        font-family $roboto_regular
+        font-size 14px
+        line-height 18px
+        margin 0
+        margin-left 4px
+        a
+            font-family $roboto_medium
+        span 
+            font-family $roboto_medium
+            font-size 14px
+            font-weight 500
+.sec-rules
+    .tab-accordion
+        label
+            border-bottom none
+            color #666
+            font-family $rajdhani_bold
+            font-size 17px
+            padding-left 10px
+            padding-right 10px
+            &::after
+                right 10px
+        .tab-accordion-content .cont
+            padding-bottom 30px
+.table-mounts
+    border-bottom 1px solid $gray-light3
+    width 100%
+    tr
+        display flex
+        display -ms-flexbox
+        font-size 14px
+        justify-content space-between
+        padding 13px 10px
+        -ms-flex-pack justify
+        &:first-child .column2
+            font-family $roboto_medium
+            margin-left 12px
+        .column1
+            font-family $roboto_regular
+            width 110px
+        .column2
+            font-family $roboto_regular
+            text-align center
+            width 100px
+        .column3
+            font-family $roboto_medium
+            font-size 15px
+.rules-desk,
+.text-date-desk,
+.list-path
+    display none
+@media screen and (min-width: 768px)
+    .text-date-mob
+        display none
+    .rules-desk
+        display block
+    .text-date-desk
+        display inline
+    .sec-description,
+    .rules-desk
+        padding 0 50px       
+        .block-text
+            margin-top 28px
+    .sec-table
+        padding 0 50px
+        .table-mounts
+            border-collapse initial
+            margin 0
+    .title-section
+        border-top none
+        .subtitle
+            color #666
+            font-size 16px
+@media screen and (min-width: 1200px)
+    .list-path
+        display block
+        border-bottom 1px solid $gray-bsocial-menu
+        border-top 1px solid $gray-bsocial-menu
+        padding 15px 0
+        margin-top 22px
+        label
+            color #999
+            font-family $rajdhani_medium
+            font-size 14px
+            &.current-section
+                color $red-btn
+                font-family $rajdhani_bold
+        span
+            color #999
+            display inline
+            margin 0 5px

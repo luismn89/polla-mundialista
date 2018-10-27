@@ -1,0 +1,254 @@
+@import './modules/_base.styl'
+
+.score-user
+    border-bottom 1px solid $gray-light3
+    display block
+    text-align center
+    h3
+        font-family $rajdhani_semibold
+        font-size 17px
+        margin 14px auto 15px auto
+.title-section 
+    margin-bottom 20px
+    margin-top 30px
+    h2
+        font-family $rajdhani_bold
+        font-size 24px
+        line-height 24px
+        margin 0
+        text-align center
+.red-line
+    margin 0 auto
+    width 50px
+.sec-text-description
+    padding-left 18px
+    padding-right 18px
+    text-align center
+    span
+        font-weight 700
+.winners-list
+    .phases-names-mob
+        .slider-phases
+            align-items center
+            border-bottom 1px solid $gray-light2
+            border-top 1px solid $gray-light2
+            display flex
+            display -ms-flexbox
+            justify-content space-between
+            margin-bottom 25px
+            padding-left 10px
+            padding-right 10px
+            -ms-flex-align center
+            -ms-flex-pack justify
+            & > a
+                font-size 18px
+                font-weight bold
+            .title-phase
+                overflow hidden
+                ul
+                    display flex
+                    display -ms-flexbox
+                    width 10000px
+                    .item-phase
+                        font-family $rajdhani_bold
+                        font-size 17px
+                        padding 10px 0
+                        text-align center
+                        width 265px
+                        p
+                            margin 0
+    .phases-names-desk
+        display none
+    .winners-table
+        .table-players
+            width 100%
+        th
+            color #999
+            font-family $roboto_medium
+            &:nth-child(2)
+                text-align left
+        tr
+            td:first-child,
+            td:last-child
+                font-weight 700
+                text-align center
+            td
+                font-family $roboto_cond_regular
+                padding 10px 0
+            &.cell-data:not(:last-child)
+                border-bottom 1px solid $gray-light2
+.list-path
+    display none
+@media screen and (min-width: 375px)
+    .winners-list
+        .phases-names-mob
+            .slider-phases
+                .title-phase
+                    ul
+                        .item-phase
+                            width 320px
+@media screen and (min-width: 414px)
+    .winners-list
+        .phases-names-mob
+            .slider-phases
+                .title-phase
+                    ul
+                        .item-phase
+                            width 355px
+@media screen and (min-width: 568px)
+    .winners-list
+        .phases-names-mob
+            .slider-phases
+                .title-phase
+                    ul
+                        .item-phase
+                            width 500px
+@media screen and (min-width: 667px)
+    .winners-list
+        .phases-names-mob
+            .slider-phases
+                .title-phase
+                    ul
+                        .item-phase
+                            width 610px
+@media screen and (min-width: 736px)
+    .winners-list
+        .phases-names-mob
+            .slider-phases
+                .title-phase
+                    ul
+                        .item-phase
+                            width 680px
+@media screen and (min-width: 768px)
+    .sec-text-description
+        padding 0 70px
+    .winners-list
+        .phases-names-mob
+            .slider-phases
+                .title-phase
+                    ul
+                        .item-phase
+                            width 710px
+        .slider-phases
+            padding 0 70px
+            .title-phase
+                ul
+                    width 10000px
+                    .item-phase
+                        width 590px
+        .winners-table
+            th:nth-child(2)
+                width 300px
+    // footer 
+    //     position absolute
+    //     bottom 0
+    //     width 100%
+@media screen and (min-width: 812px)
+    .winners-list
+        .phases-names-mob
+            .slider-phases
+                .title-phase
+                    ul
+                        .item-phase
+                            width 755px
+@media screen and (min-width: 1024px)
+    .winners-list
+        .phases-names-mob
+            .slider-phases
+                .title-phase
+                    ul
+                        .item-phase
+                            width 877px
+@media screen and (min-width: 1200px)
+    .winners-list
+        .phases-names-mob
+            display none
+        .phases-names-desk
+            display block
+            float none
+            .list-phases
+                display flex
+                display -ms-flexbox
+                justify-content space-between
+                margin-bottom 20px
+                padding 15px 50px
+                -ms-flex-pack justify
+                .item-phase
+                    height 10px
+                    position relative
+                    padding 20px 0
+                    transition .5s
+                    .phase-name
+                        color $gray-light2
+                        font-family $rajdhani_medium
+                        position absolute
+                        top -5px
+                        left -100%
+                        width 100px
+                    .bullet-phase
+                        border 4px solid $gray-light2
+                        border-radius 50%
+                        display block
+                        height 12px
+                        position relative
+                        width 12px
+                    &:hover
+                        .phase-name
+                            color $red-btn
+                            cursor pointer
+                        .bullet-phase
+                            border-color $red-btn
+                            cursor pointer
+                            transform scaleY(1.4)
+                            width 16px
+                        &:not(:first-child)   
+                            .bullet-phase                    
+                                &:after
+                                    background $red-btn  
+                                    height 3px
+                                    right 9px 
+                    &:not(:first-child)
+                        .bullet-phase
+                            &:after
+                                background $gray-light2
+                                content ""
+                                display block
+                                height 4px
+                                width 150px
+                                position absolute
+                                right 4px
+                .item-phase.active
+                    .bullet-phase
+                        border-color $red-btn
+                        transform scaleY(1.4)
+                        width 16px
+                        &:after
+                            background $red-btn
+                            height 3px
+                            right 9px
+                .item-phase.current
+                    .phase-name
+                        color $red-btn
+        .winners-table
+            .table-players
+                margin 0 auto
+                width 700px
+    .list-path
+        display block
+        border-bottom 1px solid $gray-bsocial-menu
+        border-top 1px solid $gray-bsocial-menu
+        padding 15px 0
+        margin-top 22px
+        label
+            color #999
+            font-family $rajdhani_medium
+            font-size 14px
+            &.current-section
+                color $red-btn
+                font-family $rajdhani_bold
+        span
+            color #999
+            display inline
+            margin 0 5px
+    .sec-text-description
+        margin-bottom 50px

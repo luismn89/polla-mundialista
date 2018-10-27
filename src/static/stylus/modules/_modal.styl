@@ -1,0 +1,383 @@
+#modal_login,
+#modal_stadistic,
+#modal_register
+    display none
+.modal
+    margin 15px auto 0 auto
+    left 0
+    max-height 90vh
+    right 0
+    width 302px
+    z-index 6
+    position fixed
+    top 10px
+    overflow-y auto
+    .container-modal
+        align-items center
+        background white
+        display flex
+        display -ms-flexbox
+        flex-direction column
+        height 100%
+        // justify-content center
+        padding 10px
+        position relative
+        width 100%
+        -ms-flex-align center
+        -ms-flex-direction column
+        -ms-flex-pack center
+        figure
+            margin-top 30px
+            width 238px
+        & > p
+            font-family $rajdhani_semibold
+            font-size 15px
+            font-weight 400
+            margin 0
+            margin-top 17px
+        .form
+            width 100%
+            .field-input.checkbox
+                flex-direction column
+                -ms-flex-direction column
+            .field-input
+                display flex
+                display -ms-flexbox
+                margin-top 22px
+                & > span
+                    border 1px solid $red-btn
+                    border-radius 50%
+                    font-size 29px
+                    margin-right 8px
+                    padding 10px
+                div.input-text
+                    border-bottom 1px solid #d0d0d0
+                    font-family $rajdhani_medium
+                    padding-left 12px
+                    width 234px
+                    label
+                        font-size 12px
+                    input
+                        border none
+                        bottom -5px
+                        font-size 15px
+                        outline none
+                        position relative
+                        width 100%
+                        &::-webkit-input-placeholder
+                            color $gray-light2
+                        &::-moz-placeholder
+                            color $gray-light2
+                        &:-ms-input-placeholder
+                            color $gray-light2
+                        &:-moz-placeholder
+                            color $gray-light2
+                .input-checks
+                    display block
+                    position relative
+                    padding-left 70px
+                    margin-bottom 12px
+                    cursor pointer
+                    font-size 13px
+                    font-family $rajdhani_medium
+                    -webkit-user-select none
+                    -moz-user-select none
+                    -ms-user-select none
+                    user-select none
+                    &:hover input ~ .checkmark
+                        background-color #ccc
+                    a
+                        color #666666
+                        font-family $rajdhani_semibold
+                        text-decoration underline
+                    input
+                        position absolute
+                        opacity 0
+                        cursor pointer
+                        &:checked ~ .checkmark
+                            background-color #2196F3
+                        &:checked ~ .checkmark:after
+                            display block
+                    .checkmark
+                        border 1px solid $gray-light2
+                        position absolute
+                        top 0
+                        left 0
+                        height 25px
+                        margin-left 15px
+                        width 25px
+                        // background-color #eee
+                        &:after
+                            content ""
+                            position absolute
+                            display none
+                            left 10px
+                            top 6px
+                            width 5px
+                            height 10px
+                            border solid white
+                            border-width 0 3px 3px 0
+                            -webkit-transform rotate(45deg)
+                            -ms-transform rotate(45deg)
+                            transform rotate(45deg)
+            input[type="submit"]
+                border none
+                font-family $rajdhani_bold
+                margin-top 28px
+                -webkit-appearance none
+                -moz-appearance none
+                -ms-progress-appearance none
+        .other-sesion
+            margin-top 10px
+            text-align center
+            & > p
+                font-family $rajdhani_medium
+                font-size 15px
+                margin 0
+            .btns-social
+                margin-top 25px
+                a
+                    border-radius 50%
+                    font-size 25px              
+                    padding 10px
+                a:not(:first-child)
+                    margin-left 10px
+            .link-forgive-register
+                font-size 13px
+                margin-top 20px
+                a
+                    font-family $rajdhani_semibold
+                    text-decoration underline
+                p
+                    font-family $rajdhani_medium
+                    margin 0
+        .match-stadistic
+            p.date
+                font-family $rajdhani_semibold
+                font-size 17px
+                margin-top 40px
+                margin-bottom 0
+            .name-group
+                font-family $rajdhani_bold
+                font-size 30px
+                text-align center
+                margin 0
+            p.stadium
+                font-family $rajdhani_semibold
+                font-size 15px
+                line-height 18px
+            .teams-score
+                .box-country
+                    .flag-country
+                        width 69px
+                .score
+                    margin 0 5px
+                    .markup-number 
+                        height 53px
+                        width 43px
+                        p
+                            font-size 36px
+                    .percente 
+                        margin-top 20px
+                        margin-left 15px
+                        margin-right 15px
+                        p
+                            font-family $roboto_bold
+                            font-size 18px
+                            line-height 12px
+        .teams-stadistic
+            .stadistic-local-team,
+            .stadistic-visitor-team
+                label
+                    font-family $rajdhani_bold
+                    font-size 17px
+                    color #666666
+                    margin-bottom -1px
+                .container-players-team
+                    border-bottom 1px solid $gray-disabled
+                    margin-bottom 25px
+                    margin-top 29px
+                    padding-bottom 25px
+                    h3
+                        font-family $rajdhani_bold
+                        font-size 20px
+                        line-height 30px
+                        margin 0
+                    .list-players
+                        .item-player
+                            align-items center
+                            display flex
+                            display -ms-flexbox
+                            margin-bottom 5px
+                            -ms-flex-align center
+                            p
+                                margin 0
+                            & > span
+                                color $gray-light2
+                                font-size 20px
+                            & > span,
+                            .role-player
+                                width 30px
+                                text-align center
+                            .name-player
+                                margin-left 10px
+                            .role-player,
+                            .name-player
+                                font-family $rajdhani_semibold
+                                font-size 17px
+                            .name-player
+                                line-height 15px
+                .next-matches
+                    h3
+                        font-family $rajdhani_bold
+                        font-size 20px
+                        line-height 30px
+                        margin 0
+                    .item-next-match
+                        margin-top 17px
+                        .group-date-stadium
+                            font-family $rajdhani_semibold
+                            font-size 15px
+                            line-height 30px
+                            margin 0
+                            width 100%
+                            span
+                                font-family $rajdhani_bold
+                        .teams-score
+                            align-items center
+                            display flex
+                            display -ms-flexbox
+                            justify-content space-between
+                            margin-top 0
+                            -ms-flex-align center
+                            -ms-flex-pack justify
+                            .box-country
+                                align-items center
+                                display flex
+                                display -ms-flexbox
+                                height 35px
+                                -ms-flex-align center
+                                figure
+                                    width 40px
+                                p
+                                    font-family $rajdhani_bold
+                                    font-size 15px
+                                    margin 0
+                            .teams-versus
+                                p
+                                    font-family $rajdhani_bold
+                                    font-size 17px
+                                    margin 0
+                a.btn-mobile
+                    margin-top 20px
+                    margin-bottom 25px
+                    text-align center
+        .icon-close
+            font-size 21px
+            padding 10px
+            position absolute
+            right 5px
+            top 5px
+            &:hover
+                color white
+                cursor pointer
+                text-decoration none
+        .teams-desk
+            display none
+@media screen and (max-height: 470px)
+    .modal
+        overflow-y auto
+@media screen and (max-height: 500px)
+    #modal_login
+        .container-modal
+            height 500px
+@media screen and (min-width: 768px)
+    .modal
+        align-items center
+        bottom 0
+        display flex
+        display -ms-flexbox
+        justify-content center
+        margin-top 0
+        width 100%
+        -ms-flex-align center
+        -ms-flex-pack center
+        .container-modal
+            padding 16px 56px
+            width 500px
+            .other-sesion
+                width 100%
+                .link-forgive-register
+                    display flex
+                    display -ms-flexbox
+                    justify-content space-between
+                    width 100%
+                    -ms-flex-pack justify
+            .form
+                .field-input
+                    div.input-text
+                        width 330px
+            .match-stadistic
+                padding 0 27px
+                width 100%
+                p.stadium
+                    margin 0
+            .columns-teams
+                display flex
+                display -ms-flexbox
+                justify-content space-between
+                padding 0 45px
+                width 100%
+                .stadistic-local-team,
+                .stadistic-visitor-team
+                    width 300px
+                    .container-players-team
+                        border-bottom none
+                .stadistic-local-team
+                    margin-right 24px
+    #modal_login
+        .container-modal
+            height 523px
+    #modal_register
+        .container-modal
+            height 830px
+    #modal_stadistic
+        .container-modal
+            height 900px
+            width 728px
+            padding 0
+            .match-stadistic
+                border-bottom 1px solid $gray-disabled
+                padding-bottom 17px
+                .date
+                    margin-top 17px
+            .columns-teams
+                .container-players-team
+                    margin-top 19px
+                    margin-bottom 0
+                    padding-bottom 15px
+                .next-matches
+                    margin-top 19px
+                    .item-next-match:not(:first-child)
+                        margin-top 0
+                        margin-bottom 20px
+            .columns-teams:not(:nth-child(2))
+                border-bottom 1px solid $gray-disabled
+            .teams-desk
+                display block
+            .teams-desk > a.btn-mobile
+                margin 10px auto 20px auto
+                text-align center
+                width 40%
+@media screen and (max-height: 320px)
+    .modal
+        .container-modal
+            margin-top 0
+// @media screen and (max-height: 375px)
+//     #modal_stadistic
+//         .container-modal
+//             margin-top 565px !important
+// @media screen and (max-height: 768px)
+//     #modal_stadistic
+//         .container-modal
+//             margin-top 130px

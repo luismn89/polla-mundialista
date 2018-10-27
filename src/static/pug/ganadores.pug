@@ -1,0 +1,98 @@
+extends ./partials/_base.pug
+block styles
+    link(href="/dist/css/ganadores.css", rel="stylesheet")
+block content
+    div.wrapper
+        div.score-user
+            h3.text-red.text-uppercase mis puntos: 50 ptos.
+        div.list-path
+            label.text-uppercase home
+            span >
+            label.text-uppercase.current-section ganadores
+        div.title-section
+            h2.text-uppercase ganadores
+        span.red-line
+        section.sec-text-description
+            p
+                | Estos son los 6 primeros puestos de la 
+                span.text-red Fase de Grupos 
+                | que se llevarán 
+                span.text-red S/.300 
+                | como premio.
+        section.winners-list
+            div.phases-names-mob
+                div.slider-phases
+                    a(href="#").icon-arrow-left.text-red
+                    div.title-phase
+                        ul
+                            li.item-phase
+                                p.text-uppercase.text-red fase de grupos
+                            li.item-phase
+                                p.text-uppercase.text-red octavos de final
+                    a(href="#").icon-arrow-right.text-red
+            div.phases-names-desk.col-lg-12
+                ul.list-phases.col-lg-12
+                    li.item-phase.active
+                        label.phase-name.text-uppercase fase de grupos
+                        span.bullet-phase
+                    li.item-phase.active.current
+                        label.phase-name.text-uppercase octavos
+                        span.bullet-phase
+                    li.item-phase
+                        label.phase-name.text-uppercase cuartos
+                        span.bullet-phase
+                    li.item-phase
+                        label.phase-name.text-uppercase semifinal
+                        span.bullet-phase
+                    li.item-phase
+                        label.phase-name.text-uppercase tercer lugar
+                        span.bullet-phase
+                    li.item-phase
+                        label.phase-name.text-uppercase final
+                        span.bullet-phase
+            div.winners-table
+                table.table-players
+                    tr
+                        th Puesto
+                        th Nombres
+                        th Puntos
+                    tr.cell-data
+                        td.text-red 1°
+                        td Claudia Noriega Dooris
+                        td.text-red 560
+                    tr.cell-data
+                        td.text-red 1°
+                        td Claudia Noriega Dooris
+                        td.text-red 560
+                    tr.cell-data
+                        td.text-red 1°
+                        td Claudia Noriega Dooris
+                        td.text-red 560
+                    tr.cell-data
+                        td.text-red 1°
+                        td Claudia Noriega Dooris
+                        td.text-red 560
+                    tr.cell-data
+                        td.text-red 1°
+                        td Claudia Noriega Dooris
+                        td.text-red 560
+        section.sec-text-description
+            p
+                | Fase de Grupos: 
+                span.text-red S/.300
+                | , Octavos de final: 
+                span.text-red S/.400
+                | , Cuartos de final: 
+                span.text-red S/.500
+                | , Semifinal: 
+                span.text-red S/.700
+                | , Partido por el tercer lugar: 
+                span.text-red S/.800 
+                | y la final: 
+                span.text-red S/.1000
+                | . Además, el jugador con mayor puntaje, podrá acceder a un premio de 
+                span.text-red S/.1500
+        div.adsSpace.adsSpaceZocalo1.left
+            p(style="width:160px;height:600px") Zocalo 1
+        div.adsSpace.adsSpaceZocalo2.right
+            p(style="width:160px;height:600px") Zocalo 2

@@ -1,0 +1,84 @@
+extends ./partials/_base.pug
+block styles
+    link(href="/dist/css/profile.css", rel="stylesheet")
+block content
+    div.wrapper
+        div.score-user
+            h3.text-red.text-uppercase mis puntos: 50 ptos.
+            div.title-section
+                h2.text-uppercase mi perfil
+            span.red-line
+            section.sec-text-description
+                p
+                    | Bienvenida, 
+                    span.text-red Claudia Noriega  
+                    span.desk | Puntos acumulados 
+                    br.mob
+                    span.mob Puntos acumulados 
+                    span.text-red 50 Ptos. 
+        div.list-path
+            div
+                label.text-uppercase home
+                span >
+                label.text-uppercase.current-section ganadores
+            div
+                p
+                    | Bienvenida, 
+                    span.text-red Claudia Noriega  
+                    | | Puntos acumulados  
+                    span.text-red 50 Ptos.
+        div.title-section
+            h2.text-uppercase pronóstico de la fecha
+        span.red-line
+        section.sec-list-pronostics
+            div.title-subsection
+                p.text-red.text-uppercase fase de grupos
+            div.paragraph
+                span.icon-arrow-right.text-red
+                div
+                    p 
+                        | Grupo B: PORTUGAL 
+                        span.text-red 3 - 1 
+                        | ESPAÑA
+                    p
+                        | Acertó marcador + resultado 
+                        span.text-green-olive GANÓ 3 Ptos.
+            div.paragraph
+                span.icon-arrow-right.text-red
+                div
+                    p 
+                        | Grupo C: PERÚ 
+                        span.text-red 2 - 1 
+                        | DINAMARCA
+                    p
+                        | Acertó ganador 
+                        span.text-green-olive GANÓ 1 Pto.
+            div.paragraph
+                span.icon-arrow-right.text-red
+                div
+                    p 
+                        | Grupo E: BRASIL 
+                        span.text-red 1 - 2 
+                        | SUIZA
+                    p
+                        | No acertó 
+                        span.text-red 0 Ptos.
+        section.sec-history
+            div.title-subsection
+                p.text-red.text-uppercase historial
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p 
+                    | Recibió 
+                    span.text-red 50 Ptos. 
+                    | de bienvenida al registrarse en la Polla Mundialista.
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p Acertó en primera fase: Portugal 3 - 1 España.
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p Acertó en primera fase: Perú 1 - 2 Dinamarca.
+        div.adsSpace.adsSpaceZocalo1.left
+            p(style="width:160px;height:600px") Zocalo 1
+        div.adsSpace.adsSpaceZocalo2.right
+            p(style="width:160px;height:600px") Zocalo 2

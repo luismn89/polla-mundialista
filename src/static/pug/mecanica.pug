@@ -1,0 +1,245 @@
+extends ./partials/_base.pug
+block styles
+    link(href="/dist/css/mecanica.css", rel="stylesheet")
+block content
+    div.wrapper
+        div.score-user
+            h3.text-red.text-uppercase mis puntos: 50 ptos.
+        div.list-path
+            label.text-uppercase home
+            span >
+            label.text-uppercase.current-section mecánica y premios
+        div.title-section
+            h2.text-uppercase mecánica
+        span.red-line
+        section.sec-description
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p 
+                    | Durante la etapa de la promoción los participantes de la “POLLA” deberán ingresar a la página del diario, encontrar el banner promocional o ingresar a: 
+                    a.text-red www.elbocon.pe/pollaelbocon
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p Llenar los datos establecidos por la marca  o generar un login accediendo desde sus redes sociales Facebook o Google para participar de la campaña.
+        section.sec-rules
+            div.accordion
+                div.tab-accordion
+                    input#tab-pronostic(type="checkbox", name="tabs")
+                    label(for="tab-pronostic").text-uppercase pronósticos
+                    div.tab-accordion-content
+                        div.cont
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p Los usuarios a través de la plataforma ingresan sus pronósticos, partido por partido. El cierre de los pronósticos será hasta 1 hora antes de la realización del partido. Los pronósticos ingresados previamente pueden modificarse en cualquier momento antes de la hora del cierre por partido.
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p Cada participante podrá ver la acumulación de puntos de manera personalizada.
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p Adicional, se podrá visualizar un ranking general que se debe actualizar todos los días, donde los jugadores tendrán la posibilidad de visualizar las estadísticas en tiempo real de los pronósticos de otros usuarios: resultados. La tabla se visualizará en el home de la página.
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p Se ingresarán pronósticos por cada partido y fase del Mundial.
+                div.tab-accordion
+                    input#tab-points(type="checkbox", name="tabs")
+                    label(for="tab-points").text-uppercase puntajes
+                    div.tab-accordion-content
+                        div.cont
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    a.text-red 1 Punto: 
+                                    | Acertar el ganador.
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    a.text-red 3 Puntos: 
+                                    | Acertar el marcador y el resultado.
+                div.tab-accordion
+                    input#tab-phases(type="checkbox", name="tabs")
+                    label(for="tab-phases").text-uppercase fases
+                    div.tab-accordion-content
+                        div.cont
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    | Fase de grupos: 
+                                    a.text-red Del 14 de Junio al 28 de Junio
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    | Octavos de final: 
+                                    a.text-red Del 30 de Junio al 03 de Julio
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    | Cuartos de final: 
+                                    a.text-red Del 06 de Julio al 07 de Julio
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    | Semifinales: 
+                                    a.text-red Del 10 de Julio al 11 de Julio
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    | Partido por el tercer puesto: 
+                                    a.text-red 14 de Julio
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    | Partido Final: 
+                                    a.text-red 15 de Julio
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p Los lectores podrán introducir sus pronósticos hasta 1 hora antes de que empiece el partido. 
+        section.sec-rules.rules-desk
+            div.title-section
+                h2.text-uppercase.subtitle pronósticos
+            span.red-line
+            div.block-text
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p Los usuarios a través de la plataforma ingresan sus pronósticos, partido por partido. El cierre de los pronósticos será hasta 1 hora antes de la realización del partido. Los pronósticos ingresados previamente pueden modificarse en cualquier momento antes de la hora del cierre por partido.
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p Cada participante podrá ver la acumulación de puntos de manera personalizada.
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p Adicional, se podrá visualizar un ranking general que se debe actualizar todos los días, donde los jugadores tendrán la posibilidad de visualizar las estadísticas en tiempo real de los pronósticos de otros usuarios: resultados. La tabla se visualizará en el home de la página.
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p Se ingresarán pronósticos por cada partido y fase del Mundial.
+            div.title-section
+                h2.text-uppercase.subtitle puntajes
+            span.red-line
+            div.block-text
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p 
+                        a.text-red 1 Punto: 
+                        | Acertar el ganador.
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p 
+                        a.text-red 3 Puntos: 
+                        | Acertar el marcador y el resultado.
+            div.title-section
+                h2.text-uppercase.subtitle fases
+            span.red-line
+            div.block-text
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p 
+                        | Fase de grupos: 
+                        a.text-red .................................................................................... Del 14 de Junio al 28 de Junio
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p 
+                        | Octavos de final: 
+                        a.text-red .................................................................................... Del 30 de Junio al 03 de Julio
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p 
+                        | Cuartos de final: 
+                        a.text-red ...................................................................................... Del 06 de Julio al 07 de Julio
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p 
+                        | Semifinales: 
+                        a.text-red ............................................................................................ Del 10 de Julio al 11 de Julio
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p 
+                        | Partido por el tercer puesto: 
+                        a.text-red ................................................................................................ 14 de Julio
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p 
+                        | Partido Final: 
+                        a.text-red ....................................................................................................................... 15 de Julio
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p Los lectores podrán introducir sus pronósticos hasta 1 hora antes de que empiece el partido.div.title-sectionh2.text-uppercase premios
+        div.title-section
+            h2.text-uppercase premios
+        span.red-line        
+        section.sec-description
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p Se otorgarán 36 premios a los mejores puntajes.
+        section.sec-table
+            table.table-mounts
+                tr
+                    th.column1
+                    th.column2.text-uppercase cantidad
+                    th.column3.text-uppercase.text-red premios
+                tr.background-red.text-white
+                    td.column1 Fase de grupos
+                    td.column2 6
+                    td.column3 S/. 300
+                tr
+                    td.column1 Octavos de final
+                    td.column2 6
+                    td.column3.text-red S/. 400
+                tr.background-red.text-white
+                    td.column1 Cuartos de final
+                    td.column2 6
+                    td.column3 S/. 500
+                tr
+                    td.column1 Semifinal
+                    td.column2 6
+                    td.column3.text-red S/. 700
+        section.sec-description
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p 
+                    | Además, el jugador con mayor puntaje, podrá acceder a un 
+                    span.text-red.text-uppercase premio de S/.1500. 
+                    | Por ese motivo se coloca el ranking general de participación.
+        div.title-section
+            h2.text-uppercase fechas de sorteo
+        span.red-line
+        section.sec-description
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p 
+                    | Fase de grupos: 
+                    a.text-red.text-date-mob 29 de Enero
+                    a.text-red.text-date-desk .................................................................................................................. 29 de Enero
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p 
+                    | Octavos de final: 
+                    a.text-red.text-date-mob 04 de Julio
+                    a.text-red.text-date-desk .................................................................................................................. 04 de Julio
+            //- div.paragraph
+            //-     span.icon-arrow-right.text-red
+            //-     p 
+            //-         | Cuartos de final: 
+            //-         a.text-red 12 de Julio
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p 
+                    | Semifinal: 
+                    a.text-red.text-date-mob 12 de Julio
+                    a.text-red.text-date-desk ............................................................................................................................. 12 de Julio
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p 
+                    | Tercer lugar: 
+                    a.text-red.text-date-mob 16 de Julio
+                    a.text-red.text-date-desk ......................................................................................................................... 16 de Julio
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p 
+                    | Final: 
+                    a.text-red.text-date-mob 16 de Julio
+                    a.text-red.text-date-desk .................................................................................................................................... 16 de Julio
+            div.paragraph
+                span.icon-arrow-right.text-red
+                p Se publicarán los ganadores por el Facebook de la marca y avisos en El Bocón del día.
+            div.adsSpace.adsSpaceZocalo1.left
+                p(style="width:160px;height:600px") Zocalo 1
+            div.adsSpace.adsSpaceZocalo2.right
+                p(style="width:160px;height:600px") Zocalo 2

@@ -1,0 +1,52 @@
+.adsSpace
+    align-items: center
+    background: #666
+    color: white
+    display: none
+    font-weight: bold
+    font-size: 38px
+    text-align: center
+    p
+      margin: 0
+  .adsSpaceTop
+    align-items: center
+    justify-content: center
+    margin: 10px auto
+    width: 100% !important
+    -ms-flex-pack: justify
+    -ms-flex-align: center
+  .adsSpaceZocalo1,
+  .adsSpaceZocalo2
+    position: absolute
+    top: 22px
+  .adsSpaceZocalo1.left
+      left: -180px
+  .adsSpaceZocalo2.right
+      right: -180px
+  .adsSpaceSkin,
+  .adsSpaceMovil0
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 10
+  .adsSpaceMovil1,
+  .adsSpaceMovil0
+    display: flex
+    display: -ms-flexbox
+    margin: 0 auto
+  @media screen and (min-width: 768px)
+    .adsSpaceMovil1,
+    .adsSpaceMovil0
+      display: none
+  @media screen and (min-width: 1200px)
+    .adsSpace
+      display: flex
+      display: -ms-flexbox
+      justify-content: center
+      -ms-flex-pack: center
+      -ms-flex-align: center
+    .adsSpaceTop
+      width: 980px !important
+    .adsSpaceMovil1,
+    .adsSpaceMovil0
+      display: none

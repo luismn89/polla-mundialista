@@ -1,0 +1,166 @@
+extends ./partials/_base.pug
+block styles
+    link(href="/dist/css/como-jugar.css", rel="stylesheet")
+block content
+    div.wrapper
+        div.score-user
+            h3.text-red.text-uppercase mis puntos: 50 ptos.
+        div.list-path
+            label.text-uppercase home
+            span >
+            label.text-uppercase.current-section ¿cómo jugar?
+        div.title-section
+            h2.text-uppercase.title-mobile ¿cómo jugar?
+            h2.text-uppercase.title-desk ¿cómo participo?
+        span.red-line
+        section.sec-rules
+            div.accordion
+                div.tab-accordion
+                    input#tab-how-play(type="checkbox", name="tabs")
+                    label(for="tab-how-play").text-uppercase ¿cómo participo?
+                    div.tab-accordion-content
+                        div.cont
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    | Los participantes de la “Polla Mundialista”  deberán  ingresar a la página del diario, encontrar el banner promocional o ingresar a la URL: 
+                                    a.text-red www.elbocon.pe/pollaelbocon
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p Llenar los datos establecidos por la marca  o generar un login accediendo desde  sus redes sociales Facebook o Google para participar de la campaña.
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p Los usuarios a través de la plataforma ingresan sus pronósticos, partido por partido. El cierre de los pronósticos será hasta 1 hora antes de la realización del partido. Los pronósticos ingresados previamente pueden modificarse en cualquier momento antes de la hora de cierre por partido.
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p La participación en la polla es gratuita.
+                div.tab-accordion
+                    input#tab-acumulate-points(type="checkbox", name="tabs")
+                    label(for="tab-acumulate-points").text-uppercase ¿cómo acumulo puntos?
+                    div.tab-accordion-content
+                        div.cont
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p Por resultado y por marcadores.
+                            p Por definiciones:
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    a.text-red Resultado: 
+                                    | El que determina si el equipo XX resultó ganador, perdedor o empató.
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    a.text-red Marcador: 
+                                    | El número de goles con que finalizó el partido: Por ejemplo 1-0
+                div.tab-accordion
+                    input#tab-points-system(type="checkbox", name="tabs")
+                    label(for="tab-points-system").text-uppercase sistema de puntuación
+                    div.tab-accordion-content
+                        div.cont
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    | Por acertar el marcador y el resultado 
+                                    a.text-red 3 puntos.
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    | Por acertar el ganador 
+                                    a.text-red 1 punto.
+                            div.text-border
+                                p 
+                                    | Ejemplo de Puntuación: Si el partido Colombia vs Grecia queda así: 
+                                    span.text-strong Colombia 3 - Grecia 1
+                div.tab-accordion
+                    input#tab-player-high(type="checkbox", name="tabs")
+                    label(for="tab-player-high").text-uppercase jugador con mayor puntaje
+                    div.tab-accordion-content
+                        div.cont
+                            div.paragraph
+                                span.icon-arrow-right.text-red
+                                p 
+                                    | Además, el jugador con mayor puntaje, podrá acceder a un 
+                                    span.text-red.text-uppercase premio de S/.1500. 
+                                    | Por ese motivo se coloca el ranking general de participación.
+        section.sec-rules.rules-desk
+            div.block-text
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p 
+                        | Los participantes de la “Polla Mundialista”  deberán  ingresar a la página del diario, encontrar el banner promocional o ingresar a la URL: 
+                        a.text-red www.elbocon.pe/pollaelbocon
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p Llenar los datos establecidos por la marca  o generar un login accediendo desde  sus redes sociales Facebook o Google para participar de la campaña.
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p Los usuarios a través de la plataforma ingresan sus pronósticos, partido por partido. El cierre de los pronósticos será hasta 1 hora antes de la realización del partido. Los pronósticos ingresados previamente pueden modificarse en cualquier momento antes de la hora de cierre por partido.
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p La participación en la polla es gratuita. 
+            div.title-section
+                h2.text-uppercase ¿cómo acumulo puntos?
+            span.red-line
+            div.block-text
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p Por resultado y por marcadores.
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p Por definiciones:
+                div.paragraph
+                    p.tabulation 
+                        a.text-red Resultado: 
+                        | El que determina si el equipo XX resultó ganador, perdedor o empató.
+                div.paragraph
+                    p.tabulation 
+                        a.text-red Marcador: 
+                        | El número de goles con que finalizó el partido: Por ejemplo 1-0
+            div.title-section
+                h2.text-uppercase.subtitle sistema de puntuación
+            span.red-line
+            div.block-text
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p 
+                        | Por acertar el marcador y el resultado 
+                        a.text-red .....................................................................................3 puntos.
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p 
+                        | Por acertar el ganador 
+                        a.text-red ...............................................................................................................1 punto.
+                div.text-border
+                    p 
+                        | Ejemplo de Puntuación: Si el partido Colombia vs Grecia queda así: 
+                        span.text-strong Colombia 3 - Grecia 1
+            div.title-section
+                h2.text-uppercase.subtitle jugador con mayor puntaje
+            span.red-line
+            div.block-text
+                div.paragraph
+                    span.icon-arrow-right.text-red
+                    p 
+                        | Además, el jugador con mayor puntaje, podrá acceder a un 
+                        span.text-red.text-uppercase premio de S/.1500. 
+                        | Por ese motivo se coloca el ranking general de participación.
+            div.adsSpace.adsSpaceZocalo1.left
+                p(style="width:160px;height:600px") Zocalo 1
+            div.adsSpace.adsSpaceZocalo2.right
+                p(style="width:160px;height:600px") Zocalo 2
+    section.sec-alert.background-red
+        div.title-section
+            h2.text-uppercase.text-white 
+                span.icon-exclamation-triangle
+                | restricciones
+        span.white-line
+        div.paragraph
+            span.icon-arrow-right.text-white
+            p.text-white Si existe empate técnico con otros jugadores, se generaría un sorteo entre todas las personas que participen.
+        div.paragraph
+            span.icon-arrow-right.text-white
+            p.text-white En cada fase del Mundial podrán ganar solo los 6 mejores puntajes por cada fase del Mundial. Si hay empate técnico, igual accederán al sorteo de la campaña.
+        div.paragraph
+            span.icon-arrow-right.text-white
+            p.text-white En el caso de la fase de semifinales, tercer puesto y final, se accedará al sorteo solo las personas que acierten el marcador dentro de los 90 minutos. No existirá marcador con penales.
