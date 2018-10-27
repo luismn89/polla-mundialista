@@ -1,0 +1,149 @@
+@import '../../../static/stylus/modules/_variables.styl'
+
+.score-user
+    border-bottom 1px solid $gray-light3
+    display block
+    text-align center
+    h3
+        font-family $rajdhani_semibold
+        font-size 17px
+        margin 14px auto 15px auto
+.title-section
+    margin-bottom 20px
+    margin-top 30px
+    h2
+        font-family $rajdhani_bold
+        font-size 24px
+        line-height 24px
+        margin 0
+        text-align center
+.red-line,
+.white-line
+    margin 0 auto
+    width 50px
+.paragraph
+    display flex
+    display -ms-flexbox
+    padding-left 10px
+    padding-right 10px
+    span
+        font-size 16px
+        font-weight bold
+    p
+        font-family $roboto_regular
+        font-size 14px
+        line-height 18px
+        margin 0
+        margin-left 4px
+        a
+            font-family $roboto_medium
+        span
+            font-family $roboto_medium
+            font-size 14px
+            font-weight 500
+.sec-rules
+    .tab-accordion
+        label
+            border-bottom none
+            color #666
+            font-family $rajdhani_bold
+            font-size 17px
+            padding-left 10px
+            padding-right 10px
+            &::after
+                right 10px
+        .tab-accordion-content .cont
+            padding-bottom 30px
+            & > p
+                font-family $roboto_regular
+                font-size 14px
+                line-height 18px
+                margin 0
+                margin-left 30px
+            .text-border
+                border 1px solid $red-btn
+                padding 10px 14px
+                margin 17px 10px 0 10px
+                p
+                    font-family $roboto_regular
+                    font-size 14px
+                    letter-spacing -0.21px
+                    line-height 18px
+                    margin 0
+                    span
+                        font-family $roboto_medium
+.sec-alert.background-red
+    padding-bottom 28px
+    .title-section
+        padding-top 30px
+        h2
+            span
+                font-size 15px
+                margin-right 10px
+    .white-line
+        margin-bottom 26px
+.title-desk,
+.rules-desk,
+.list-path
+    display none
+footer
+    margin-top 0 !important
+@media screen and (min-width: 768px)
+    .title-mobile
+        display none
+    .title-desk,
+    .rules-desk
+        display block
+    .sec-alert
+        margin-top 40px
+    .sec-alert,
+    .sec-rules
+        padding 0 50px
+        .block-text
+            margin-top 28px
+    .paragraph
+        p
+            line-height 21px
+        .tabulation
+            margin-left 20px
+    .text-border
+        border 1px solid $red-btn
+        padding 10px 14px
+        margin 17px 10px 0 10px
+        p
+            font-family $roboto_regular
+            font-size 14px
+            letter-spacing -0.21px
+            line-height 18px
+            margin 0
+            span
+                font-family $roboto_medium
+    .title-section
+        .subtitle
+            color #666
+            font-size 16px
+@media screen and (min-width: 1200px)
+    .sec-alert.background-red
+        margin auto -900px
+@media screen and (min-width: 1200px)
+    .list-path
+        display block
+        border-bottom 1px solid $gray-bsocial-menu
+        border-top 1px solid $gray-bsocial-menu
+        padding 15px 0
+        margin-top 22px
+        label
+            color #999
+            font-family $rajdhani_medium
+            font-size 14px
+            &.current-section
+                color $red-btn
+                font-family $rajdhani_bold
+        span
+            color #999
+            display inline
+            margin 0 5px
+    .sec-alert
+        .paragraph
+            margin 0 auto
+            width 935px

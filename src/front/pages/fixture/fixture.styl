@@ -1,0 +1,239 @@
+@import '../../../static/stylus/modules/_variables.styl'
+.score-user
+    border-bottom 1px solid $gray-light3
+    display block
+    text-align center
+    h3
+        font-family $rajdhani_semibold
+        font-size 17px
+        margin 14px auto 15px auto
+.title-section
+    margin-bottom 20px
+    margin-top 30px
+    h1
+        font-family $rajdhani_bold
+        font-size 24px
+        line-height 24px
+        margin 0
+        text-align center
+.red-line
+    margin 0 auto
+    width 50px
+.sec-dates
+    padding-left 10px
+    padding-right 10px
+    .box-select-groups
+        margin-top 30px
+        padding 0
+        .phases-names-mob
+            p
+                font-family $rajdhani_semibold
+                font-size 17px
+                font-weight 400
+                margin 0
+        .phases-names-desk
+            display none
+        .box-slider-groups
+            align-items center
+            display flex
+            display -ms-flexbox
+            justify-content center
+            margin-top 20px
+            padding 0
+            -ms-flex-align center
+            -ms-flex-pack center
+            .btn-arrow
+                font-size 17px
+                padding 29.5px 7px
+            .container-list-dates
+                overflow hidden
+                max-width 240px
+                .list-dates
+                    border-bottom 0.5px solid $red-btn
+                    border-top 0.5px solid $red-btn
+                    display flex
+                    display -ms-flexbox
+                    list-style none
+                    .item-date
+                        .date
+                            margin-top 5px
+                            margin-bottom 5px
+                        .game
+                            background $gray-light3
+                            border-radius 5px
+                            margin-bottom 1px
+                        div
+                            padding-left 10px
+                            padding-right 10px
+                            p
+                                font-size 14px
+                                margin 0
+                                text-align center
+                            .number
+                                font-size 17px
+                    .item-date:not(:last-child)
+                        .date
+                            border-right 0.5px solid $red-btn
+                        .game
+                            border-right 1px solid $gray-light2
+.sec-news
+    h4
+        font-family $rajdhani_bold
+        font-size 24px
+        margin-top 20px
+        margin-bottom 20px
+        text-align center
+    .red-line
+        margin 0 auto
+        width 50px
+    .sec-btn-more
+        padding-left 10px
+        padding-right 10px
+        a
+            margin-top 10px
+            text-align center
+            &:hover
+                color white
+                cursor pointer
+                text-decoration none
+.list-path
+    display none
+@media screen and (min-width: 600px)
+    .sec-dates
+        .box-select-groups
+            .box-slider-groups
+                .container-list-dates
+                    max-width 480px
+@media screen and (min-width: 768px)
+    .sec-dates
+        padding-left 20px
+        padding-right 20px
+        .box-select-groups
+            .box-slider-groups
+                .btn-arrow
+                    font-size 24px
+                    padding 26.5px 14px
+                .container-list-dates
+                    max-width 708px
+    .sec-news
+        padding 0 20px
+        .sec-btn-more
+            padding 0
+@media screen and (min-width: 1024px)
+    .sec-dates
+        .box-select-groups
+            .box-slider-groups
+                .container-list-dates
+                    max-width 766px
+@media screen and (min-width: 1200px)
+    .sec-dates
+        .box-select-groups
+            padding 0
+            float none
+            .phases-names-mob
+                display none
+            .phases-names-desk
+                display block
+                float none
+                .list-phases
+                    display flex
+                    display -ms-flexbox
+                    justify-content space-between
+                    margin-bottom 20px
+                    padding 0
+                    -ms-flex-pack justify
+                    .item-phase
+                        height 10px
+                        position relative
+                        padding 20px 0
+                        transition .5s
+                        .phase-name
+                            color $gray-light2
+                            font-family $rajdhani_medium
+                            position absolute
+                            top -5px
+                            left -100%
+                            width 100px
+                        .bullet-phase
+                            border 4px solid $gray-light2
+                            border-radius 50%
+                            display block
+                            height 12px
+                            position relative
+                            width 12px
+                        &:hover
+                            .phase-name
+                                color $red-btn
+                                cursor pointer
+                            .bullet-phase
+                                border-color $red-btn
+                                cursor pointer
+                                transform scaleY(1.4)
+                                width 16px
+                            &:not(:first-child)
+                                .bullet-phase
+                                    &:after
+                                        background $red-btn
+                                        height 3px
+                                        right 9px
+                        &:not(:first-child)
+                            .bullet-phase
+                                &:after
+                                    background $gray-light2
+                                    content ""
+                                    display block
+                                    height 4px
+                                    width 161px
+                                    position absolute
+                                    right 4px
+                    .item-phase.active
+                        .bullet-phase
+                            border-color $red-btn
+                            transform scaleY(1.4)
+                            width 16px
+                            &:after
+                                background $red-btn
+                                height 3px
+                                right 9px
+                    .item-phase.current
+                        .phase-name
+                            color $red-btn
+            .box-slider-groups
+                border-left 0.5px solid $red-btn
+                border-right 0.5px solid $red-btn
+                float none
+                padding 0
+                .btn-arrow
+                    display none
+                .container-list-dates
+                    max-width 935px
+                    .list-dates
+                        .item-date
+                            div
+                                padding-left 23.2px
+                                padding-right 23.3px
+                            &:hover
+                                background $red-btn
+                                color $white
+                                cursor pointer
+                                .game
+                                    background $red-btn
+                                    p
+                                        color $white
+    .list-path  
+        display block
+        border-bottom 1px solid $gray-bsocial-menu
+        border-top 1px solid $gray-bsocial-menu
+        padding 15px 0
+        margin-top 22px
+        label
+            color #999
+            font-family $rajdhani_medium
+            font-size 14px
+            &.current-section
+                color $red-btn
+                font-family $rajdhani_bold
+        span
+            color #999
+            display inline
+            margin 0 5px

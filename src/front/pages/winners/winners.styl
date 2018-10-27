@@ -1,0 +1,84 @@
+@import '../../../static/stylus/modules/_variables.styl'
+.score-user
+    border-bottom 1px solid $gray-light3
+    display block
+    text-align center
+    h3
+        font-family $rajdhani_semibold
+        font-size 17px
+        margin 14px auto 15px auto
+.title-section
+    margin-bottom 20px
+    margin-top 30px
+    h2
+        font-family $rajdhani_bold
+        font-size 24px
+        line-height 24px
+        margin 0
+        text-align center
+.red-line
+    margin 0 auto
+    width 50px
+.sec-text-description
+    padding-left 18px
+    padding-right 18px
+    text-align center
+    span
+        font-weight 700
+.list-path
+    display none
+.winners-table
+    .no-list-winners
+        .box-gray
+            padding 20px 10px
+            background $gray-bsocial-menu
+            p
+                font-family $roboto_bold
+                font-size 16px
+                font-weight bold
+                text-align center
+        a
+            width 95%
+            margin 25px auto
+            text-align center
+@media screen and (min-width: 768px)
+    .sec-text-description
+        padding 0 70px
+    // footer
+    //     position absolute
+    //     bottom 0
+    //     width 100%
+    .winners-table
+        .no-list-winners
+            margin-top 80px
+            width 85%
+            margin-left auto
+            margin-right auto
+            .box-gray
+                padding 50px 105px
+                background $gray-bsocial-menu
+                p
+                    font-size 19px
+            a
+                width 250px
+                margin-bottom 80px
+@media screen and (min-width: 1200px)
+    .list-path
+        display block
+        border-bottom 1px solid $gray-bsocial-menu
+        border-top 1px solid $gray-bsocial-menu
+        padding 15px 0
+        margin-top 22px
+        label
+            color #999
+            font-family $rajdhani_medium
+            font-size 14px
+            &.current-section
+                color $red-btn
+                font-family $rajdhani_bold
+        span
+            color #999
+            display inline
+            margin 0 5px
+    .sec-text-description
+        margin-bottom 50px

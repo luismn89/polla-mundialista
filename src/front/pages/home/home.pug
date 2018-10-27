@@ -1,0 +1,38 @@
+div
+    div.score-user(v-show="isLogged")
+        h3.text-red.text-uppercase mis puntos: {{ user.points }} ptos.
+    section.slider-home
+        div.container-slider
+            agile(:options="options").list-slider
+                div.slide
+                    figure.img-slider
+                        img(src="/mundial/polla/dist/polla/img/img1.jpg", alt="")
+                    div.box-text-slider
+                        h2.text-white.text-uppercase bienvenido a la
+                        h1.text-white.text-uppercase
+                            | polla&nbsp;
+                            span.text-mustard mundialista
+                        h4.text-white.text-uppercase regístrate y obtén 50 puntos por fase
+                        a(href="#", v-if="!isLogged", @click.prevent="openLogin").btn.background-red.text-white.text-uppercase empieza ahora
+    section.sec-alert-notification
+        div.alert-notification.background-red.col-xs-12.col-sm-3
+            i.icon-exclamation-triangle.text-white
+            p.text-white.text-uppercase alerta
+        div.alert-description.background-gray-dark.col-xs-12.col-sm-9
+            p.text-white.text-uppercase acierta marcador + resultado 3 ptos. acierto 1 pto.
+    section.sec-pronostic-dates.col-lg-12
+        p.text-uppercase.title-pronostic.text-gray-dark.col-lg-12 completa tus pronósticos de la fecha
+        span.red-line.col-lg-12
+        div.box-select-groups.col-lg-12
+            calendar(withdates="true", origin="home")
+    section.sec-matches
+        list-matches(typelist="home")
+    //- section.sec-news
+    //-     h4.text-uppercase.text-strong noticias relacionadas
+    //-     span.red-line
+    //-     list-news
+    //-     div.sec-btn-more
+    //-         a.text-white.text-uppercase.btn-mobile.background-red
+    //-             | ver más
+    //-             i.icon-arrow-right
+    modal-popup(type="stadistic", v-show="openStadistic")

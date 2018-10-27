@@ -1,0 +1,18 @@
+div
+  publicity(name="top", :width="980")
+  publicity(name="movil0")
+  publicity(name="skin")
+  publicity(name="movil1")
+  header
+    nav-bar
+  modal-popup(type="login" v-show="openLogin")
+  modal-popup(type="register" v-show="openRegister")
+  modal-popup(type="recovery" v-show="openRecovery")
+  modal-popup(type="loading", :message="message" v-show="openLoading")
+  modal-popup(type="dialog", :tdialog="typedialog", v-show="openDialog")
+  div.wrapper
+    router-view
+    publicity(name="zocalo1", dir="left", :width="160")
+    publicity(name="zocalo2", dir="right", :width="160")
+  include /pug/partials/_footer.pug
+  //- vuenut(:store="$store.state")

@@ -1,0 +1,256 @@
+div
+  div.score-user(v-show="isLogged")
+      h3.text-red.text-uppercase mis puntos: {{ user.points }} ptos.
+  div.list-path
+      label.text-uppercase home
+      span >
+      label.text-uppercase.current-section mecánica y premios
+  div.title-section
+      h2.text-uppercase mecánica
+  span.red-line
+  section.sec-description
+      div.paragraph
+          span.icon-arrow-right.text-red
+          p
+              | Durante la etapa de la promoción los participantes de la “POLLA” deberán ingresar a la página del diario, encontrar el banner promocional o ingresar a la URL:&nbsp;
+              a.text-red www.elbocon.pe/POLLAELBOCON
+      div.paragraph
+          span.icon-arrow-right.text-red
+          p Llenar los datos establecidos con tus datos personales.
+  section.sec-rules
+      div.accordion
+          div.tab-accordion
+              input#tab-pronostic(type="checkbox", name="tabs")
+              label(for="tab-pronostic").text-uppercase pronósticos
+              div.tab-accordion-content
+                  div.cont
+                      div.paragraph
+                          span.icon-arrow-right.text-red
+                          p Los usuarios a través de la plataforma ingresan sus pronósticos, partido por partido. El cierre de los pronósticos será hasta 1 hora antes de la realización del partido. Los pronósticos ingresados previamente pueden modificarse en cualquier momento antes de la hora del cierre por partido.
+                      div.paragraph
+                          span.icon-arrow-right.text-red
+                          p Cada participante podrá ver la acumulación de puntos de manera personalizada.
+                      div.paragraph
+                          span.icon-arrow-right.text-red
+                          p Se ingresarán pronósticos por cada partido y fase del Mundial.
+          div.tab-accordion
+              input#tab-points(type="checkbox", name="tabs")
+              label(for="tab-points").text-uppercase puntajes
+              div.tab-accordion-content
+                  div.cont
+                      div.paragraph
+                          span.icon-arrow-right.text-red
+                          p
+                              span.text-red 1 Punto:&nbsp;
+                              | Acertar el ganador.
+                      div.paragraph
+                          span.icon-arrow-right.text-red
+                          p
+                              span.text-red 3 Puntos:&nbsp;
+                              | Acertar el marcador y el resultado.
+          div.tab-accordion
+              input#tab-phases(type="checkbox", name="tabs")
+              label(for="tab-phases").text-uppercase fases del mundial
+              div.tab-accordion-content
+                  div.cont
+                      div.paragraph
+                          span.icon-arrow-right.text-red
+                          p
+                              | Fase de grupos:&nbsp;
+                              span.text-red Del 14 de Junio al 28 de Junio
+                      div.paragraph
+                          span.icon-arrow-right.text-red
+                          p
+                              | Octavos de final:&nbsp;
+                              span.text-red Del 30 de Junio al 3 de Julio
+                      div.paragraph
+                          span.icon-arrow-right.text-red
+                          p
+                              | Cuartos de final:&nbsp;
+                              span.text-red Del 6 de Julio al 7 de Julio
+                      div.paragraph
+                          span.icon-arrow-right.text-red
+                          p
+                              | Semifinales:&nbsp;
+                              span.text-red Del 10 de Julio al 11 de Julio
+                      div.paragraph
+                          span.icon-arrow-right.text-red
+                          p
+                              | Partido por el tercer y cuarto puesto:&nbsp;
+                              span.text-red 14 de Julio
+                      div.paragraph
+                          span.icon-arrow-right.text-red
+                          p
+                              | Final:&nbsp;
+                              span.text-red 15 de Julio
+                      div.paragraph
+                          span.icon-arrow-right.text-red
+                          p Los lectores podrán introducir sus pronósticos hasta 1 hora antes de que empiece el partido.
+  section.sec-rules.rules-desk
+      div.title-section
+          h2.text-uppercase.subtitle pronósticos
+      span.red-line
+      div.block-text
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p Los usuarios a través de la plataforma ingresan sus pronósticos, partido por partido. El cierre de los pronósticos será hasta 1 hora antes de la realización del partido. Los pronósticos ingresados previamente pueden modificarse en cualquier momento antes de la hora de cierre por partido.
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p Cada participante podrá ver la acumulación de puntos de manera personalizada.
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p Se ingresarán pronósticos por cada partido y fase del Mundial.
+      div.title-section
+          h2.text-uppercase.subtitle puntajes
+      span.red-line
+      div.block-text
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p
+                  span.text-red 1 Punto:&nbsp;
+                  | Acertar el ganador.
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p
+                  span.text-red 3 Puntos:&nbsp;
+                  | Acertar el marcador y el resultado.
+      div.title-section
+          h2.text-uppercase.subtitle fases
+      span.red-line
+      div.block-text
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p
+                  | Fase de grupos:&nbsp;
+                  span.text-red .................................................................................... Del 14 de Junio al 28 de Junio
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p
+                  | Octavos de final:&nbsp;
+                  span.text-red .................................................................................... Del 30 de Junio al 3 de Julio
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p
+                  | Cuartos de final:&nbsp;
+                  span.text-red ...................................................................................... Del 6 de Julio al 7 de Julio
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p
+                  | Semifinales:&nbsp;
+                  span.text-red ............................................................................................ Del 10 de Julio al 11 de Julio
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p
+                  | Partido por el tercer y cuarto puesto:&nbsp;
+                  span.text-red ................................................................................................ 14 de Julio
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p
+                  | Final:&nbsp;
+                  span.text-red ....................................................................................................................... 15 de Julio
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p Los lectores podrán introducir sus pronósticos hasta 1 hora antes de que empiece el partido
+  div.title-section
+      h2.text-uppercase premios
+  span.red-line
+  section.sec-description
+      div.paragraph
+          span.icon-arrow-right.text-red
+          p Se otorgaran 36 premios a los mejores puntajes.
+  section.sec-table
+      table.table-mounts
+          tr
+              th.column1
+              th.column2.text-uppercase cantidad
+              th.column3.text-uppercase.text-red premios
+          tr.background-red.text-white
+              td.column1 Fase de grupos
+              td.column2 6
+              td.column3 S/. 300
+          tr
+              td.column1 Octavos de final
+              td.column2 6
+              td.column3.text-red S/. 400
+          tr.background-red.text-white
+              td.column1 Cuartos de final
+              td.column2 6
+              td.column3 S/. 500
+          tr
+              td.column1 Semi
+              td.column2 6
+              td.column3.text-red S/. 700
+          tr.background-red.text-white
+              td.column1 Partido por el tercer y cuarto puesto
+              td.column2 6
+              td.column3 S/. 800
+          tr
+              td.column1 Final
+              td.column2 6
+              td.column3.text-red S/. 1,000
+  section.sec-description
+      div.paragraph
+          span.icon-arrow-right.text-red
+          p
+              | Además, el jugador con mayor puntaje, podrá acceder a un&nbsp;
+              span.text-red.text-uppercase premio de S/.1500.&nbsp;
+              | Por ese motivo, se coloca el ranking general de participación.
+      div.title-section
+          h2.text-uppercase.subtitle restricciones
+      span.red-line
+      div.block-text
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p *Si existe empate técnico con otros jugadores, se generaría un sorteo entre todas las personas que participen.
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p En cada fase del Mundial podrán ganar solo los 6 mejores puntajes por cada fase del Mundial .Si hay empate técnico, igual accederán al sorteo de la campaña.
+          div.paragraph
+              span.icon-arrow-right.text-red
+              p En el caso de la fase de Semifinales, tercer puesto y final, se accederá al sorteo solo las personas que acierten el marcador dentro de los 90 minutos. No existirá marcador con penales.
+  div.title-section
+      h2.text-uppercase fechas de sorteo
+  span.red-line
+  section.sec-description
+      div.paragraph
+          span.icon-arrow-right.text-red
+          p
+              | Fase de grupos:&nbsp;
+              span.text-red.text-date-mob 2 de Julio
+              span.text-red.text-date-desk .................................................................................................................. 2 de Julio
+      div.paragraph
+          span.icon-arrow-right.text-red
+          p
+              | Octavos de final:&nbsp;
+              span.text-red.text-date-mob 4 de Julio
+              span.text-red.text-date-desk .................................................................................................................. 4 de Julio
+      //- div.paragraph
+      //-     span.icon-arrow-right.text-red
+      //-     p
+      //-         | Cuartos de final:
+      //-         a.text-red 12 de Julio
+      div.paragraph
+          span.icon-arrow-right.text-red
+          p
+              | Semifinal:&nbsp;
+              span.text-red.text-date-mob 12 de Julio
+              span.text-red.text-date-desk ............................................................................................................................. 12 de Julio
+      div.paragraph
+          span.icon-arrow-right.text-red
+          p
+              | Tercer lugar:&nbsp;
+              span.text-red.text-date-mob 16 de Julio
+              span.text-red.text-date-desk ......................................................................................................................... 16 de Julio
+      div.paragraph
+          span.icon-arrow-right.text-red
+          p
+              | Final:&nbsp;
+              span.text-red.text-date-mob 16 de Julio
+              span.text-red.text-date-desk .................................................................................................................................... 16 de Julio
+      br
+      div.paragraph
+          p Se publicarán los ganadores por el Facebook de la marca y avisos en el diario El Bocón del día siguiente del sorteo.
+      div.paragraph
+          p Entrega de premios: Se coordinará con cada ganador para la entrega de sus premios.
+      div.paragraph
+          p Nota: Los sorteos se realizarán en presencia de un notario público.

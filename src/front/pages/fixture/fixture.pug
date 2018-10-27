@@ -1,0 +1,23 @@
+div
+  div.score-user(v-show="isLogged")
+      h3.text-red.text-uppercase mis puntos: {{ user.points }} ptos.
+  div.list-path
+      label.text-uppercase home
+      span >
+      label.text-uppercase.current-section fixture
+  div.title-section
+      h1.text-uppercase fixture
+  span.red-line
+  section.sec-dates
+      div.box-select-groups.col-lg-12
+          calendar(withdates="true", origin="fixture")
+  section.sec-match
+    list-matches(typelist="fixture")
+  //- section.sec-news
+  //-     h4.text-uppercase.text-strong noticias relacionadas
+  //-     span.red-line
+  //-     list-news
+  //-     div.sec-btn-more
+  //-         a.text-white.text-uppercase.btn-mobile.background-red
+  //-             | ver más
+  //-             i.icon-arrow-right

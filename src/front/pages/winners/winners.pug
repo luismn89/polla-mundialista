@@ -1,0 +1,41 @@
+div
+    div.score-user(v-show="isLogged")
+        h3.text-red.text-uppercase mis puntos: {{ user.points }} ptos.
+    div.list-path
+        label.text-uppercase home
+        span >
+        label.text-uppercase.current-section ganadores
+    div.title-section
+        h2.text-uppercase ganadores
+    span.red-line
+    section.sec-text-description
+        p
+            | Estos son los 5 primeros puestos de la&nbsp;
+            span.text-red {{ getPhase }}&nbsp;
+            | que se llevarán&nbsp;
+            span.text-red S/.{{ listAmountWin[getPhase] }}&nbsp;
+            | como premio.
+    section.winners-list
+        calendar(slide="slide")
+        div.winners-table
+            list-winners(:list="listPhase", v-show="isThereWinners")
+            div.no-list-winners(v-show="!isThereWinners")
+                div.box-gray
+                    p.text-red Muy pronto visualizarás a los ganadores de la {{ getPhase }}, no te quedes y participa de la Polla Mundialista con tu pronóstico.
+                a.background-red.text-white.text-uppercase.btn-mobile(href="#", @click.prevent="initBet()") participa ahora
+    section.sec-text-description
+        p
+            | Fase de Grupos:&nbsp;
+            span.text-red S/.300
+            | , Octavos de final:&nbsp;
+            span.text-red S/.400
+            | , Cuartos de final:&nbsp;
+            span.text-red S/.500
+            | , Semifinal:&nbsp;
+            span.text-red S/.700
+            | , Partido por el tercer lugar:&nbsp;
+            span.text-red S/.800&nbsp;
+            | y la final:&nbsp;
+            span.text-red S/.1000
+            | . Además, el jugador con mayor puntaje, podrá acceder a un premio de&nbsp;
+            span.text-red S/.1500

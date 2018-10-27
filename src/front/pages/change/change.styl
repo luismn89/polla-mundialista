@@ -1,0 +1,103 @@
+@import '../../../static/stylus/modules/_variables.styl'
+.modal
+    margin 15px auto 0 auto
+    max-height 90vh
+    width 302px
+    .container-modal
+        align-items center
+        background white
+        display flex
+        display -ms-flexbox
+        flex-direction column
+        height 100%
+        // justify-content center
+        padding 10px
+        position relative
+        width 100%
+        -ms-flex-align center
+        -ms-flex-direction column
+        -ms-flex-pack center
+#form-change-pass
+  align-items center
+  display flex
+  display -ms-flexbox
+  flex-direction column
+  -ms-flex-direction column
+  -ms-flex-align center
+  .error-msg
+      align-items center
+      color $red-btn
+      display flex
+      display -ms-flexbox
+      justify-content center
+      font-family $rajdhani_medium
+      margin 15px auto 5px auto
+      text-align center
+      font-size 15px
+      width 100%
+      -ms-flex-pack center
+      -ms-flex-align center
+      i
+          margin-right 5px
+  figure
+    margin-top 30px
+    width 238px
+  & > p
+    font-family $rajdhani_semibold
+    font-size 15px
+    font-weight 400
+    margin 0
+    margin-top 17px
+  .form
+    width 100%
+    .field-input.checkbox
+      flex-direction column
+      -ms-flex-direction column
+    .field-input
+      display flex
+      display -ms-flexbox
+      margin-top 22px
+      & > span
+        border 1px solid $red-btn
+        border-radius 50%
+        font-size 29px
+        margin-right 8px
+        padding 10px
+      div.input-text
+        border-bottom 1px solid #d0d0d0
+        font-family $rajdhani_medium
+        padding-left 12px
+        width 234px
+        label
+          font-size 12px
+        input
+          border none
+          bottom -5px
+          font-size 15px
+          outline none
+          position relative
+          width 100%
+          &::-webkit-input-placeholder
+            color $gray-light2
+          &::-moz-placeholder
+            color $gray-light2
+          &:-ms-input-placeholder
+            color $gray-light2
+          &:-moz-placeholder
+            color $gray-light2
+    input[type="submit"]
+      border none
+      font-family $rajdhani_bold
+      margin-top 20px
+      -webkit-appearance none
+      -moz-appearance none
+      -ms-progress-appearance none
+    .recaptcha
+        margin-top 20px
+        width 100%
+@media screen and (min-width: 768px)
+  #form-change-pass
+    .form
+      .field-input
+        div.input-text
+          width 330px

@@ -1,0 +1,22 @@
+div.modal
+  div.container-modal
+    div#form-change-pass
+      figure
+        img(src="/mundial/polla/dist/polla/img/logopolla.png")
+      p Registre su nueva contraseña
+      form#form-change-password.form(action="#", method="POST", @submit.prevent="sendChange")
+        .field-input
+          span.icon-lock.text-red
+          div.input-text
+            label.title-input.text-red.text-uppercase contraseña
+            input(type="password", placeholder="Tu contraseña", v-model="password")
+        .field-input
+          span.icon-lock.text-red
+          div.input-text
+            label.title-input.text-red.text-uppercase confirmación de contraseña
+            input(type="password", placeholder="Confirma tu contraseña", v-model="confirm_password")
+        vue-recaptcha(ref="recaptcha", :sitekey="key_recaptcha", :size="sizeCaptcha").recaptcha.recaptcha-changepass
+        input(type="submit", value="enviar").background-red.btn-mobile.text-white.text-uppercase
+        label.error-msg(v-show="!valid && message_error != ''")
+          i.icon-exclamation-triangle
+          | {{ message_error }}
