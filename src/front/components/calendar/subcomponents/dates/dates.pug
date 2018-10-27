@@ -1,0 +1,9 @@
+carousel(:perPageCustom="[[320, 5], [375, 7], [667, 10], [768, 12], [1024, 15]]", :mouseDrag="false", :paginationEnabled="false", :navigationEnabled="true", :navigationPrevLabel="'<i class=\"icon-arrow-left\"></i>'", :navigationNextLabel="'<i class=\"icon-arrow-right\"></i>'", :class="positionList").box-slider-groups.col-lg-12
+    slide.item-date(v-for="(item, index) in calendarDates", :key="item.id", :class="[isDisabled(item), item.selected  ? 'selectedDate' : '']")
+        div.date(@click="goDayPhase(item, index)")
+            p.day.text-gray-light {{ item.dayName }}
+            p.number {{ item.day }}
+        div.game
+            p.min-number.text-red
+                |{{ item.numMatch }}
+                span.icon-soccer-ball(v-show="item.numMatch != '-'")

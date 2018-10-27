@@ -1,0 +1,9 @@
+div.dialog
+  div.check_mark(v-if="typedialog == 'success'")
+    div.sa-icon.sa-success.animate
+      span.sa-line.sa-tip.animateSuccessTip
+      span.sa-line.sa-long.animateSuccessLong
+      div.sa-placeholder
+      div.sa-fix
+  p.message {{ message }}
+  a(href="#", @click.prevent="closeModal").btn-agree-dialog.btn-mobile.background-red.text-white ACEPTAR

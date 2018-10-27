@@ -1,0 +1,68 @@
+div#form-register
+  figure
+    img(src="/mundial/polla/dist/polla/img/logopolla.png")
+  p Para participar registrate o inicia sesión
+  form.form(action="#", method="POST", @submit.prevent="sendRegister")
+    .field-input
+      span.icon-user-o.text-red
+      div.input-text
+        label.title-input.text-red.text-uppercase nombres
+        input(type="text", placeholder="Tus nombres", name="first_name", v-model="user.first_name")
+    .field-input
+      span.icon-user-o.text-red
+      div.input-text
+        label.title-input.text-red.text-uppercase apellidos
+        input(type="text", placeholder="Tus apellidos", name="last_name", v-model="user.last_name")
+    .field-input
+      span.icon-user-o.text-red
+      div.input-text
+        label.title-input.text-red.text-uppercase n° documento
+        input(type="text", placeholder="Número de documento", name="num_document", v-model="user.num_document")
+    .field-input
+      span.icon-user-o.text-red
+      div.input-text
+        label.title-input.text-red.text-uppercase Movil
+        input(type="text", placeholder="Teléfono movil", name="phone", v-model="user.phone")
+    .field-input
+      span.icon-user-o.text-red
+      div.input-text
+        label.title-input.text-red.text-uppercase F. de Nacimiento
+        input#idDate(type="text", placeholder="DD/MM/YYYY", name="birthday", v-model="user.birthday")
+    .field-input
+      span.icon-mail.text-red
+      div.input-text
+        label.title-input.text-red.text-uppercase correo electrónico
+        input(type="email", placeholder="Tu correo electrónico", name="email", v-model="user.email")
+    .field-input
+      span.icon-lock.text-red
+      div.input-text
+          label.title-input.text-red.text-uppercase contraseña
+          input(type="password", placeholder="Tu constraseña", name="email", v-model="user.password")
+    .field-input
+      span.icon-lock.text-red
+      div.input-text
+          label.title-input.text-red.text-uppercase confirmar contraseña
+          input(type="password", placeholder="Repite tu contraseña", v-model="user.confirm_password")
+    .field-input.checkbox
+      label.input-checks
+        | Acepto los&nbsp;
+        a(href="#", title="title") Términos y Condiciones&nbsp;
+        | |&nbsp;
+        a(href="#", title="title") Política de Privacidad
+        input(type="checkbox", v-model="terms_checked")
+        span.checkmark
+    vue-recaptcha(ref="recaptcha", :sitekey="key_recaptcha", :size="sizeCaptcha").recaptcha.recaptcha-register
+    input(type="submit", value="registrarme").background-red.btn-mobile.text-white.text-uppercase
+    label.error-msg(v-show="!valid_register && message_error != ''")
+        i.icon-exclamation-triangle
+        | {{ message_error }}
+  div.other-sesion
+    //- p o registrarme con:
+    //- div.btns-social
+    //-     a(href="#").icon-facebook.text-white.background-blue-facebook
+    //-     a(href="#").icon-gplus.text-white.background-red-gplus
+    div.link-forgive-register
+        a(href="#", @click.prevent="openRecovery").text-red Olvidé mi contraseña
+        p
+            | ¿Ya tienes cuenta?&nbsp;
+            a(href="#", title="title", @click.prevent="openLogin").text-red Inicia sesión

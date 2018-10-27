@@ -1,0 +1,264 @@
+.overlay
+    bottom 0
+    left 0
+    right 0
+    top 0
+    background rgba(0, 0, 0, 0.7)
+    position fixed
+    z-index 5
+.modal
+    margin 15px auto 0 auto
+    left 0
+    max-height 90vh
+    right 0
+    width 302px
+    z-index 6
+    position fixed
+    top 10px
+    overflow-y auto
+    .container-modal
+        align-items center
+        background white
+        display flex
+        display -ms-flexbox
+        flex-direction column
+        height 100%
+        // justify-content center
+        padding 10px
+        position relative
+        width 100%
+        -ms-flex-align center
+        -ms-flex-direction column
+        -ms-flex-pack center
+        .match-stadistic
+            p.date
+                font-family $rajdhani_semibold
+                font-size 17px
+                margin-top 40px
+                margin-bottom 0
+            .name-group
+                font-family $rajdhani_bold
+                font-size 30px
+                text-align center
+                margin 0
+            p.stadium
+                font-family $rajdhani_semibold
+                font-size 15px
+                line-height 18px
+            .teams-score
+                .box-country
+                    .flag-country
+                        width 69px
+                .score
+                    margin 0 5px
+                    .markup-number
+                        height 53px
+                        width 43px
+                        p
+                            font-size 36px
+                    .percente
+                        margin-top 20px
+                        margin-left 15px
+                        margin-right 15px
+                        p
+                            font-family $roboto_bold
+                            font-size 18px
+                            line-height 12px
+        .teams-stadistic
+            .stadistic-local-team,
+            .stadistic-visitor-team
+                label
+                    font-family $rajdhani_bold
+                    font-size 17px
+                    color #666666
+                    margin-bottom -1px
+                .container-players-team
+                    border-bottom 1px solid $gray-disabled
+                    margin-bottom 25px
+                    margin-top 29px
+                    padding-bottom 25px
+                    h3
+                        font-family $rajdhani_bold
+                        font-size 20px
+                        line-height 30px
+                        margin 0
+                    .list-players
+                        .item-player
+                            align-items center
+                            display flex
+                            display -ms-flexbox
+                            margin-bottom 5px
+                            -ms-flex-align center
+                            p
+                                margin 0
+                            & > span
+                                color $gray-light2
+                                font-size 20px
+                            & > span,
+                            .role-player
+                                width 30px
+                                text-align center
+                            .name-player
+                                margin-left 10px
+                            .role-player,
+                            .name-player
+                                font-family $rajdhani_semibold
+                                font-size 17px
+                            .name-player
+                                line-height 15px
+                .next-matches
+                    h3
+                        font-family $rajdhani_bold
+                        font-size 20px
+                        line-height 30px
+                        margin 0
+                    .item-next-match
+                        margin-top 17px
+                        .group-date-stadium
+                            font-family $rajdhani_semibold
+                            font-size 15px
+                            line-height 30px
+                            margin 0
+                            width 100%
+                            span
+                                font-family $rajdhani_bold
+                        .teams-score
+                            align-items center
+                            display flex
+                            display -ms-flexbox
+                            justify-content space-between
+                            margin-top 0
+                            -ms-flex-align center
+                            -ms-flex-pack justify
+                            .box-country
+                                align-items center
+                                display flex
+                                display -ms-flexbox
+                                height 35px
+                                -ms-flex-align center
+                                figure
+                                    width 40px
+                                p
+                                    font-family $rajdhani_bold
+                                    font-size 15px
+                                    margin 0
+                            .teams-versus
+                                p
+                                    font-family $rajdhani_bold
+                                    font-size 17px
+                                    margin 0
+                a.btn-mobile
+                    margin-top 20px
+                    margin-bottom 25px
+                    text-align center
+        .icon-close
+            font-size 21px
+            padding 10px
+            position absolute
+            right 5px
+            top 5px
+            &:hover
+                color white
+                cursor pointer
+                text-decoration none
+        .teams-desk
+            display none
+@media screen and (max-height: 470px)
+    .modal
+        overflow-y auto
+@media screen and (max-height: 500px)
+    .modal
+        .container-modal.popup-login,
+        .container-modal.popup-dialog
+            height 500px
+@media screen and (min-width: 768px)
+    .modal
+        align-items center
+        bottom 0
+        display flex
+        display -ms-flexbox
+        justify-content center
+        margin-top 0
+        width 40%
+        -ms-flex-align center
+        -ms-flex-pack center
+        .container-modal
+            padding 16px 56px
+            width 500px
+            .match-stadistic
+                padding 0 27px
+                width 100%
+                p.stadium
+                    margin 0
+            .columns-teams
+                display flex
+                display -ms-flexbox
+                justify-content space-between
+                padding 0 45px
+                width 100%
+                .stadistic-local-team,
+                .stadistic-visitor-team
+                    width 300px
+                    .container-players-team
+                        border-bottom none
+                .stadistic-local-team
+                    margin-right 24px
+        .container-modal.popup-login
+            height 600px
+        .container-modal.popup-register
+            height 810px
+            padding-left 25px
+            padding-right 25px
+        .container-modal.popup-dialog
+            height initial
+            padding-top 55px
+            padding-bottom 55px
+        .container-modal.popup-recovery
+            height 500px
+        .container-modal.popup-changepass
+            height 600px
+    .modal
+        width 60%
+        max-height 95vh
+        .container-modal.popup-stadistic
+            height 920px
+            width 728px
+            padding 0
+            .match-stadistic
+                border-bottom 1px solid $gray-disabled
+                padding-bottom 17px
+                .date
+                    margin-top 17px
+            .columns-teams
+                .container-players-team
+                    margin-top 19px
+                    margin-bottom 0
+                    padding-bottom 15px
+                .next-matches
+                    margin-top 19px
+                    .item-next-match:not(:first-child)
+                        margin-top 0
+                        margin-bottom 20px
+            .columns-teams:not(:nth-child(2))
+                border-bottom 1px solid $gray-disabled
+            .teams-desk
+                display block
+            .teams-desk > a.btn-mobile
+                margin 10px auto 20px auto
+                text-align center
+                width 40%
+    .modal
+        .popup-loading
+            height initial
+@media screen and (max-height: 320px)
+    .modal
+        .container-modal
+            margin-top 0
+@media screen and (max-height: 375px)
+    .modal
+        .container-modal.popup-stadistic
+            margin-top 565px !important
+@media screen and (max-height: 768px)
+    .modal
+        .container-modal.popup-stadistic
+            margin-top 130px

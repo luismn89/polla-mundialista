@@ -1,0 +1,30 @@
+div#form-login
+  figure
+    img(src="/mundial/polla/dist/polla/img/logopolla.png")
+  p Para participar inicia sesión
+  form#form-login.form(action="#", method="POST", @submit.prevent="sendLogin")
+    .field-input
+      span.icon-mail.text-red
+      div.input-text
+        label.title-input.text-red.text-uppercase correo electrónico
+        input(type="email", placeholder="Tu correo electrónico", v-model="login.email")
+    .field-input
+      span.icon-lock.text-red
+      div.input-text
+        label.title-input.text-red.text-uppercase contraseña
+        input(type="password", placeholder="Tu constraseña", v-model="login.password")
+    vue-recaptcha(ref="recaptcha", :sitekey="key_recaptcha", :size="sizeCaptcha").recaptcha.recaptcha-login
+    input(type="submit", value="iniciar sesión").background-red.btn-mobile.text-white.text-uppercase
+    label.error-msg(v-show="!valid && message_error != ''")
+        i.icon-exclamation-triangle
+        | {{ message_error }}
+  div.other-sesion
+    //- p o iniciar sesión con:
+    //- div.btns-social
+    //-     a(href="#").icon-facebook.text-white.background-blue-facebook
+    //-     a(href="#").icon-gplus.text-white.background-red-gplus
+    div.link-forgive-register
+      a(href="#", @click.prevent="openRecovery").text-red Olvidé mi contraseña
+      p
+        |¿No tienes una cuenta?&nbsp;
+        a(href="#", title="title", @click.prevent="openRegister").text-red Regístrate

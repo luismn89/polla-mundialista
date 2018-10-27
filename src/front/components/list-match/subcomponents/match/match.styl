@@ -1,0 +1,380 @@
+@import '../../../../../static/stylus/modules/_variables.styl'
+
+.container-match
+    display flex
+    display -ms-flexbox
+    flex-direction column
+    -ms-flex-direction column
+.header-match
+    .group-date
+        div
+            display flex
+            display -ms-flexbox
+            justify-content center
+            -ms-flex-pack center
+        p
+            font-family $rajdhani_bold
+            font-size 17px
+            line-height 20px
+            margin 0 0 10px 0
+            span
+                color black
+                font-family $rajdhani_medium
+            &.center-cell
+                font-family $rajdhani_medium
+            &.first-cell,
+            &.last-cell
+                color $red-btn
+    .match
+        padding 0
+        position initial
+        .social-buttons
+            align-items center
+            display flex
+            display -ms-flexbox
+            font-size 15px
+            margin 0 auto
+            justify-content space-between
+            width 50px
+            -ms-flex-align center
+            -ms-flex-pack justify
+            a
+                &.icon-twitter
+                    font-size 17px
+                    color $blue-twitter
+                    &:hover
+                        color $blue-twitter
+                &.icon-gplus
+                    font-size 21px
+                    color $red-gplus
+                    &:hover
+                        color $red-gplus
+                &:hover
+                    text-decoration none
+                &.icon-facebook
+                    color $blue-facebook
+                    &:hover
+                        color $blue-facebook
+        .teams-score
+            display flex
+            display -ms-flexbox
+            flex-direction row
+            justify-content space-between
+            margin-top 20px
+            width 100%
+            -ms-flex-direction row
+            -ms-flex-pack justify
+            .box-country
+                height 90px
+                position relative
+                .flag-country
+                    margin-top 0
+                    width 78px
+                    img
+                        width 100%
+                .name-country-percent
+                    bottom -20px
+                    font-family $rajdhani_bold
+                    font-size 24px
+                    left 0
+                    line-height 20px
+                    position absolute
+                    right 0
+                    text-align center
+                    label.percent-country
+                        font-family $roboto_bold
+                        font-size 14px
+            .score
+                display flex
+                display -ms-flexbox
+                justify-content space-between
+                .markup-number
+                    border 1px solid $gray-light2
+                    height 64px
+                    width 45px
+                    input
+                        border none
+                        font-family $rajdhani_bold
+                        font-size 48px
+                        height 62px
+                        padding-left 10px
+                        outline 0
+                        width 42px
+                .percente
+                    margin-left 5px
+                    margin-right 5px
+                    margin-top 15px
+                    line-height 18px
+                    p
+                        font-family $rajdhani_bold
+                        font-size 50px
+                        margin 0
+                        // margin-left 42px
+                        // margin-right 42px
+                        &:first-child
+                            font-family $roboto_bold
+                            font-size 21px
+                        &:last-child
+                            font-family $roboto_medium
+                            font-size 14px
+.footer-match
+    .box-buttons
+        margin-top 35px
+        padding-left 10px
+        padding-right 10px
+        a.btn-mobile
+            margin-top 10px
+            &:focus,
+            &:hover
+                color white
+                text-decoration none
+.final-match
+    .header-match
+        .group-date
+            margin-bottom 10px
+            div
+                flex-direction column
+                -ms-flex-direction column
+                p
+                    margin-bottom 0
+                    &.last-cell
+                        color black
+                    &.center-cell
+                    &.last-cell
+                        font-family $rajdhani_medium
+                        span
+                            color black
+                            font-family $rajdhani_bold
+                    span.sep
+                        display none
+        .match
+            .teams-score
+                .box-country
+                    .name-country-percent
+                        bottom -5px
+    .footer-match
+        margin-top 25px
+.match-fixture
+    .header-match
+        .group-date
+            div
+                p.center-cell span
+                    display none
+    .footer-match
+        .result-match
+            margin-top 40px
+            div
+                border-bottom 1px solid $gray-light3
+                border-top 1px solid $gray-light3
+                text-align center
+                margin-bottom 10px
+                &:first-child p
+                    color #999999
+                    font-family $rajdhani_medium
+                    font-size 17px
+                    margin 13px auto
+                    span
+                        font-family $rajdhani_bold
+                &:last-child p
+                    font-family $rajdhani_bold
+                    font-size 15px
+                    line-height 16px
+                    margin 5px auto
+                    width 217px
+.current-match
+    background $gray-dark
+    padding-bottom 32px
+    padding-top 36px
+    text-align center
+    .header-match
+        padding-bottom 0
+        position relative
+        border-top none
+        .group-date
+            div
+                flex-wrap wrap
+                -ms-flex-wrap wrap
+                p
+                    margin 0
+                    &.first-cell
+                        width 100%
+                        span
+                            display none
+                    &.first-cell
+                    &.first-cell span
+                        color $white
+                    &.center-cell
+                        font-family $rajdhani_bold
+                    &.center-cell
+                    &.center-cell span
+                    &.last-cell
+                        color $yellow-mustard-light
+            .user
+                color $white
+                font-family $rajdhani_regular
+                margin-top 0
+                span
+                    color $white
+        .match
+            .social-buttons
+                a
+                    color $white
+            .teams-score
+                .box-country
+                    .name-country-percent
+                        color $white
+                        bottom -5px
+                .score-current
+                    p
+                        font-family $rajdhani_bold
+                        font-size 50px
+                        margin 0 42px
+    .footer-match
+        margin-top 15px
+        .detail-game
+            position initial
+            float none
+            p:nth-child(1),
+            p:last-child
+                font-family $rajdhani_medium
+            p:nth-child(2)
+                font-family $rajdhani_bold
+            p
+                margin-top 0
+                margin-bottom 0
+                font-size 17px
+                line-height 20px
+                span
+                    color $white
+                    display none
+@media screen and (min-width: 568px)
+    .match
+        .social-buttons
+            position absolute
+            top 0
+            right 15px
+        .teams-score
+            align-items center
+            justify-content space-between
+            margin-top 0
+            padding 0 20px
+            -ms-flex-align center
+            -ms-flex-pack justify
+            .box-country
+                align-items center
+                display flex
+                display -ms-flexbox
+                -ms-flex-align center
+                .name-country-percent
+                    position static
+                &:last-child
+                    flex-direction row-reverse
+                    -ms-flex-direction row-reverse
+@media screen and (min-width: 768px)
+    .header-match
+        border 1px solid $gray-light2
+        padding-top 17px
+        padding-bottom 10px
+        .group-date
+            p
+                margin-bottom 0
+        .match
+            .social-buttons
+                top 17px
+            .teams-score
+                align-items center
+                justify-content space-between
+                margin-top 0
+                padding 0
+                -ms-flex-align center
+                -ms-flex-pack justify
+                .box-country
+                    align-items center
+                    display flex
+                    display -ms-flexbox
+                    -ms-flex-align center
+                    max-width 250px
+                    width 250px
+                    .name-country-percent
+                        position relative
+                        bottom -5px
+                    &:first-child
+                        .name-country-percent
+                            text-align left
+                    &:last-child
+                        flex-direction row-reverse
+                        -ms-flex-direction row-reverse
+                        .name-country-percent
+                            text-align right
+    .footer-match
+        .box-buttons
+            display flex
+            display -ms-flexbox
+            margin 0
+            padding 0
+            a.btn-mobile
+                margin-top 0
+    .final-match
+        .header-match
+            .group-date
+                div
+                    flex-direction row
+                    -ms-flex-direction row
+                    p
+                        span.sep
+                            display inline
+        .footer-match
+            margin-top 0
+    .current-match
+        .header-match
+            padding-bottom 0
+            padding-top 0
+            border none
+            .group-date
+                div
+                    flex-wrap nowrap
+                    -ms-flex-wrap nowrap
+                    p.first-cell
+                        width initial
+                        span
+                            display inline
+                .user
+                    margin-top 5px
+            .match
+                .social-buttons
+                    top 0
+                .teams-score
+                    .score-current
+                        p
+                            font-size 50px
+                            margin 0 42px
+        .footer-match
+            margin-top 0
+            .detail-game
+                display flex
+                display -ms-flexbox
+                justify-content center
+                -ms-flex-pack center
+                p
+                    span
+                        display inline
+    .match-fixture
+        .footer-match
+            .result-match
+                display flex
+                display -ms-flexbox
+                justify-content space-between
+                margin-top 0
+                padding 0
+                -ms-flex-pack justify
+                div
+                    align-items center
+                    border 1px solid $gray-light3
+                    display flex
+                    display -ms-flexbox
+                    margin-bottom 0
+                    width 50%
+                    -ms-flex-align center
+                    &:last-child p
+                        width 100%
+

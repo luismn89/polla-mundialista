@@ -1,0 +1,74 @@
+div.container-match(:class="classStatus")
+    div.header-match
+        div.group-date
+            div
+                p.text-uppercase.first-cell
+                    | {{ item.group_name }}&nbsp;
+                    span.sep |&nbsp;
+                p.text-uppercase.center-cell
+                    | {{ textCenter }}&nbsp;
+                    span.text-strong {{ pointsWinScore }}&nbsp;
+                    span.sep |&nbsp;
+                p.text-uppercase.last-cell
+                    | {{ textLast }}&nbsp;
+                    span.text-strong {{ pointsWin }}
+            p.user.col-xs-12.col-sm-12.col-lg-12.text-uppercase(v-if="isCurrent && !isUserLogged")
+                | tu pronóstico&nbsp;
+                span.text-strong {{ item.user }}&nbsp;
+                | es:
+        div.match.col-xs-12
+            //- div.social-buttons
+            //-     a.icon-facebook(href="#")
+            //-     a.icon-twitter(href="#")
+            div.teams-score
+                div.box-country
+                    figure.flag-country
+                        img(:src="item.local_balon_url", alt="")
+                        //- img(src="/src/static/img/balones/Peru-sombra-blanca.png", alt="Perú")
+                    div.name-country-percent
+                        label.text-uppercase {{ nameTeamLocal }}
+                        br
+                        label.percent-country(v-if="isNotPlayOrClosedBet || isFixture") {{ item.equip_percent.local_win }}%
+                div.score(v-if="!isCurrent || isFixture")
+                    div.markup-number
+                        input(type="text", placeholder="-", maxlength="1", :score="betLocalUser", v-model="scoreLocalBet")
+                    div.percente
+                        p.text-red {{ percentMatch }}%
+                        p Coinciden
+                    div.markup-number
+                        input(type="text", placeholder="-", maxlength="1", :score="betVisitUser", v-model="scoreVisitorBet")
+                div.score-current(v-if="isCurrent && !isFixture")
+                    p.text-mustard-light {{ scoreLocalBet }} - {{ scoreVisitorBet }}
+                div.box-country
+                    figure.flag-country
+                        img(:src="item.visit_balon_url", alt="")
+                    div.name-country-percent
+                        label.text-uppercase {{ nameTeamVisitor }}
+                        br
+                        label.percent-country(v-if="isNotPlayOrClosedBet || isFixture") {{ item.equip_percent.visit_win }}%
+    div.footer-match(v-if="isUserLogged")
+        div.box-buttons(v-if="isNotPlayOrClosedBet")
+            a#see-stadistic.text-white.text-strong.text-uppercase.btn-mobile.background-mustard-light(href="#", @click.prevent="openStadistic(item.id)") ver estadísticas
+            a.text-white.text-strong.text-uppercase.btn-mobile(href="#", :class="btnEnabled", @click.prevent="betMatch()") apuesta ahora
+        div.detail-game.col-xs-12(v-if="isCurrent && !isFixture")
+            p.text-white
+                | {{ item.equip_percent.local_win }}% Preferencia {{ item.local }}&nbsp;
+                span |&nbsp;
+            p.text-mustard-light.text-uppercase
+                | coinciden contigo {{ item.user_percent.same_wager }}%&nbsp;
+                span |&nbsp;
+            p.text-white {{ item.equip_percent.visit_win }}% Preferencia {{ item.visit }}
+        div.box-ribbon(v-if="isFinallyMatch && !isFixture")
+            div.text-uppercase.text-strong.text-white(:class="statusResult") {{ textResult }}
+        div.result-match(v-if="isFixture")
+            div
+                p(v-if="!stillNotPlay")
+                    | Resultado:&nbsp;
+                    //- span.text-red(v-if="isLoseBet || isFinallyMatch || isClosedBet") SIGUE INTENTANDO
+                    span.text-red {{ item.goals_local }} - {{ item.goals_visit }}&nbsp;
+                    span.text-green-olive.text-uppercase(v-if="item.user_percent.user_wager && item.user_percent.win_user_points > 0") | ganaste {{ item.user_percent.win_user_points }} ptos.
+                    span.text-red.text-uppercase(v-if="isLoseBet || (!item.user_percent.user_wager && isFinallyMatch) || (!item.user_percent.user_wager && isClosedBet)") | SIGUE INTENTANDO.
+                p(v-if="stillNotPlay")
+                  span.text-red {{ missingTimeFixture }}
+            div
+                p.text-red 3 Ptos. Aciertos Marcador + Resultado 1 Pto. Aciertos Ganador

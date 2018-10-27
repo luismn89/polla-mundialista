@@ -1,0 +1,220 @@
+@import '../../../static/stylus/modules/_variables.styl'
+
+.overlay
+    bottom 0
+    left 0
+    right 0
+    top 0
+    background rgba(0, 0, 0, 0.7)
+    position fixed
+    z-index 5
+.class-navbar
+    background $black
+    border-bottom 3px solid $yellow-gold
+    box-shadow 0 3px 5px $gray-light
+    padding 0
+    .wrapper-nav
+        align-items center
+        display flex
+        display -ms-flexbox
+        justify-content center
+        padding-left 10px
+        padding-right 10px
+        -ms-flex-pack center
+        -ms-flex-align center
+        width 100%
+        .class-btn-menu
+            font-size 28px
+            padding 7px 10px 7px 8px
+            text-align center
+            &:focus,
+            &:hover
+                color $white
+                text-decoration none
+        .col-xs-3,
+        .col-xs-9,
+        .col-xs-2
+            padding 0
+        div.container-logo-nav
+            margin 5px 28px
+            figure
+                display flex
+                display -ms-flexbox
+                height 58px
+                margin 5px auto
+                padding 0
+                width 158px
+                img
+                    height 100%
+                    padding 0
+        div:last-child
+            text-align right
+.class-btn-profile
+    border 2px solid $gray-medium
+    border-radius 50%
+    font-size 20px
+    padding 7px 8px 8px
+.menu
+    background white
+    // display none
+    position absolute
+    left 0
+    top 0
+    z-index 6
+    padding 0
+    .sec-options
+        padding 7px 0
+        .option.selected
+            background $gray-selected-menu
+            color $red-text
+        .option
+            font-size 19px
+            font-weight bold
+            line-height 24px
+            padding 15px 18px
+            a
+                align-items center
+                color inherit
+                display flex
+                display -ms-flexbox
+                -ms-flex-align center
+                // padding 20px 0
+                span
+                    font-size  24px
+                label
+                    font-family $rajdhani_semibold
+                    margin-left 15px
+                &:hover,
+                &:hover label
+                    cursor pointer
+    .sec-social
+        border-bottom 1px solid $gray-bsocial-menu
+        border-top 1px solid $gray-bsocial-menu
+        display flex
+        display -ms-flexbox
+        flex-direction row
+        padding 19px 20px
+        -ms-flex-direction row
+        .follow
+            font-family $rajdhani_medium
+            font-size 17px
+            line-height 24px
+            margin-right 20px
+.links-specials
+    display flex
+    display -ms-flexbox
+    justify-content space-between
+    -ms-flex-pack justify
+    padding 10px
+    a:first-child
+        .logo-special
+            width 195px
+            margin-left -20px
+    a:last-child
+        .logo-special
+            width 100px
+.col-lg-4,
+.col-lg-8
+    padding 0
+@media screen and (max-width: 1199px)
+    .menu
+        width 300px
+        .sec-options
+            width 100%
+@media screen and (max-height: 569px)
+    .menu
+        overflow-y auto
+        height 100vh
+@media screen and (min-width: 768px)
+    .box-text-slider
+        margin-top 100px
+@media screen and (min-width: 1200px)
+    .overlay.overlayMenu
+        display none
+    .class-navbar
+        height 78px
+        justify-content initial
+        -ms-flex-pack initial
+        z-index 5
+        .sec-logo-profile
+        .sec-btn-menu
+            display none
+        .wrapper-nav
+            align-items center
+            display flex
+            display -ms-flexbox
+            margin 0 auto
+            width 1280px
+            -ms-flex-align center
+            padding 0
+            .col-lg-2,
+            .col-lg-4,
+            .col-lg-5
+                float none
+            .container-logo-nav
+                margin 5px 0px
+                figure
+                    cursor pointer
+            .menu
+                display flex !important
+                display -ms-flexbox !important
+                background none
+                position static
+                align-items center
+                display flex
+                display -ms-flexbox
+                flex-direction row-reverse
+                -ms-flex-align center
+                -ms-flex-direction row-reverse
+                .col-lg-8
+                    padding 0
+                    align-items center
+                    display flex
+                    display -ms-flexbox
+                    -ms-flex-align center
+                .option.selected
+                    background none
+                .sec-social
+                    display none
+                .sec-options
+                    .list-options
+                        align-items center
+                        display flex
+                        display -ms-flexbox
+                        -ms-flex-align center
+                        .option
+                            color $white
+                            font-family $rajdhani_semibold
+                            font-size 16px
+                            margin 0 15px
+                            padding 0
+                            a
+                                // padding-bottom 20px
+                                // padding-top 20px
+                                color $white
+                                span
+                                    display none
+                                label
+                                    margin 0
+                                &:hover
+                                    text-decoration none
+                                    color $white
+                            &:first-child
+                                display none
+                .links-specials
+                    padding 0
+                    align-items center
+                    display flex
+                    display -ms-flexbox
+                    -ms-flex-align center
+                    a:first-child
+                        .logo-special
+                            width 115px
+                    .logo-special
+                        align-items center
+                        display flex
+                        display -ms-flexbox
+                        // height 93px
+                        margin-left 0
+                        width 75px
+                        -ms-flex-align center

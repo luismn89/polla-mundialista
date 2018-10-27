@@ -1,0 +1,12 @@
+div
+  div.overlay(@click="closeModal")
+  div.modal
+    div.container-modal(:class="typemodal")
+      form-login(v-if="openedLogin")
+      form-register(v-if="openedRegister")
+      form-recovery(v-if="openedRecovery")
+      form-changepass(v-if="openedChangePassword")
+      stadistic(v-if="openedStadistic")
+      modal-dialog(v-if="openedDialog")
+      loading(v-if="openedLoading", :message_status="message")
+      a.background-red.text-white.icon-close(@click.prevent="closeModal")

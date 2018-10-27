@@ -1,0 +1,184 @@
+@import '../../../../../static/stylus/modules/_variables.styl'
+.phases-names-mob
+    .slider-phases
+        align-items center
+        border-bottom 1px solid $gray-light2
+        border-top 1px solid $gray-light2
+        display flex
+        display -ms-flexbox
+        justify-content space-between
+        margin-bottom 25px
+        padding-left 10px
+        padding-right 10px
+        -ms-flex-align center
+        -ms-flex-pack justify
+        .agile__arrow--prev
+            order 1
+        .agile__arrow--next
+            order 3
+        .agile__arrow
+            font-size 18px
+            font-weight bold
+            appearance none
+            background transparent
+            border none
+            width 30px
+            -webkit-appearance none
+            svg
+                fill $red-btn
+        .agile__list
+            order 2
+            overflow hidden
+            .agile__track
+                display flex
+                display -ms-flexbox
+                width 10000px
+                .item-phase
+                    font-family $rajdhani_bold
+                    font-size 17px
+                    padding 10px 0
+                    text-align center
+                    width 265px
+                    p
+                        margin 0
+.phases-names-desk
+    display none
+.phases-name
+    margin 15px 0
+    p
+        font-family $rajdhani_semibold
+        font-size 17px
+        font-weight 400
+        margin 0
+@media screen and (min-width: 375px)
+    .phases-names-mob
+        .slider-phases
+            .title-phase
+                ul
+                    .item-phase
+                        width 320px
+@media screen and (min-width: 414px)
+    .phases-names-mob
+        .slider-phases
+            .title-phase
+                ul
+                    .item-phase
+                        width 355px
+@media screen and (min-width: 568px)
+    .phases-names-mob
+        .slider-phases
+            .title-phase
+                ul
+                    .item-phase
+                        width 500px
+@media screen and (min-width: 667px)
+    .phases-names-mob
+        .slider-phases
+            .title-phase
+                ul
+                    .item-phase
+                        width 610px
+@media screen and (min-width: 736px)
+    .phases-names-mob
+        .slider-phases
+            .title-phase
+                ul
+                    .item-phase
+                        width 680px
+@media screen and (min-width: 768px)
+    .phases-names-mob
+        .slider-phases
+            .title-phase
+                ul
+                    .item-phase
+                        width 710px
+    .slider-phases
+        padding 0 70px
+        .title-phase
+            ul
+                width 10000px
+                .item-phase
+                    width 590px
+@media screen and (min-width: 812px)
+    .phases-names-mob
+        .slider-phases
+            .title-phase
+                ul
+                    .item-phase
+                        width 755px
+@media screen and (min-width: 1024px)
+    .phases-names-mob
+        .slider-phases
+            .title-phase
+                ul
+                    .item-phase
+                        width 877px
+@media screen and (min-width: 1200px)
+    .phases-names-mob
+         display none
+    .phases-names-desk
+        display block
+        float none
+        .list-phases
+            display flex
+            display -ms-flexbox
+            justify-content space-between
+            margin-bottom 20px
+            padding 15px 30.5px
+            -ms-flex-pack justify
+            .item-phase
+                height 10px
+                position relative
+                padding 20px 0
+                transition .5s
+                .phase-name
+                    color $gray-light2
+                    font-family $rajdhani_medium
+                    position absolute
+                    top -5px
+                    left -100%
+                    width 100px
+                .bullet-phase
+                    border 4px solid $gray-light2
+                    border-radius 50%
+                    display block
+                    height 12px
+                    position relative
+                    width 12px
+                &:hover
+                    .phase-name
+                        color $red-btn
+                        cursor pointer
+                    .bullet-phase
+                        border-color $red-btn
+                        cursor pointer
+                        transform scaleY(1.4)
+                        width 16px
+                    &:not(:first-child)
+                        .bullet-phase
+                            &:after
+                                // background $red-btn
+                                height 3px
+                                right 12px
+                &:not(:first-child)
+                    .bullet-phase
+                        &:after
+                            background $gray-light2
+                            content ""
+                            display block
+                            height 4px
+                            width 156px
+                            position absolute
+                            right 4px
+            .item-phase.active
+                .bullet-phase
+                    border-color $red-btn
+                    transform scaleY(1.4)
+                    width 16px
+                    &:after
+                        background $red-btn
+                        height 3px
+                        right 9px
+            .item-phase.current
+                .phase-name
+                    color $red-btn

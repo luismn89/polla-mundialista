@@ -1,0 +1,24 @@
+div.col-lg-4
+  div.profile-desk
+      div.user-profile.background-red.col-lg-12
+          div.buttons-login-register.col-lg-12(v-show="!isLogged")
+              a#btn-login-desk.btn.text-uppercase.text-white(href="#", @click.prevent="openLogin") iniciar sesión
+              a#btn-register-desk.btn.text-uppercase.text-white(href="#", @click.prevent="openRegister") registrarse
+          div.profile-points.col-lg-12(v-show="isLogged")
+              div.box-profile
+                  a.btn-profile.text-white(href="#")
+                      | Hola,&nbsp;
+                      span {{ user.first_name }} {{ user.last_name }}
+                      //- i.icon-triangle-down
+                  a(href="#", @click.prevent="logout").logout Cerrar Sesión
+              a.btn-points.text-white(href="#")
+                  | {{ user.points }}&nbsp;
+                  span ptos.
+  div.profile-mobile
+      div.user-profile.background-red.col-lg-3
+          div.icon-user-o.class-btn-profile
+          div.data-user
+              p.text-white.text-uppercase {{ user.first_name }} {{ user.last_name }}
+              p.text-white
+                  | Puntos acumulados&nbsp;
+                  span.text-strong {{ user.points }} Ptos.

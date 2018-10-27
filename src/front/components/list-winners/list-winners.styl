@@ -1,0 +1,25 @@
+.table-players
+    width 100%
+    th
+        color #999
+        font-family $roboto_medium
+        &:nth-child(2)
+            text-align left
+    tr
+        td:first-child,
+        td:last-child
+            font-weight 700
+            text-align center
+        td
+            font-family $roboto_cond_regular
+            padding 10px 0
+        &.cell-data:not(:last-child)
+            border-bottom 1px solid $gray-light2
+@media screen and (min-width: 768px)
+    .table-players
+        th:nth-child(2)
+            width 300px
+@media screen and (min-width: 1200px)
+    .table-players
+        margin 0 auto
+        width 700px

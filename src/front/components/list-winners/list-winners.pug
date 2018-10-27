@@ -1,0 +1,9 @@
+table.table-players
+    tr
+        th Puesto
+        th Nombres
+        th Puntos
+    tr.cell-data(v-for="(item, index) in list", :key="item.id")
+        td.text-red {{ index + 1 }}º
+        td {{ item.full_name }}
+        td.text-red {{ item.points }}

@@ -1,0 +1,12 @@
+div
+    div.phases-names-mob
+        agile(:options="options", v-if="type", ref="carousel").slider-phases
+            div.slide.item-phase(v-for="(item, index) in listPhases", :data-index="index")
+                p.text-uppercase.text-red {{ item.title }}
+        div.phases-name(v-if="type == ''")
+            p.text-uppercase.text-red fase de grupos
+    div.phases-names-desk.col-lg-12
+        ul.list-phases.col-lg-12
+            li.item-phase(v-for="(item, index) in listPhases", :key="item.id", :class="[item.active  ? 'active' : '', item.current ? 'current' : '']", @click="goPhase(index)")
+                label.phase-name.text-uppercase {{ item.title }}
+                span.bullet-phase

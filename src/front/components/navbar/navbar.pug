@@ -1,0 +1,51 @@
+div
+    div.overlay.overlayMenu(v-show="this.overlay", @click.prevent="toogleMenu(false)")
+    nav.class-navbar.col-xs-12.col-lg-12(v-if="!isNotChange")
+        div.wrapper-nav
+            div.col-xs-2.col-sm-1.sec-btn-menu(v-if="!isNotChange")
+                a(href="#", title="Menu" @click.prevent="toogleMenu(true)").icon-menu.class-btn-menu.background-red.text-white
+            div.container-logo-nav.col-xs-9.col-lg-2
+                figure(@click="goSection('home')")
+                    img(src="/mundial/polla/dist/polla/img/logopolla.png", alt="logo").class-logo.col-xs-12
+                    //- img(src="/src/static/img/logopolla.png", alt="logo").class-logo.col-xs-12
+            div.col-xs-2.sec-logo-profile(v-if="!isNotChange")
+                a(href="#", title="Profile").icon-user-o.class-btn-profile.text-gray-light
+            div(v-show="openedMenu", v-if="!isNotChange").menu.col-lg-12
+                profile
+                div.col-lg-8
+                    div.sec-options.col-lg-9
+                        ul.list-options
+                            li(@click.prevent="goSection('home')").option.selected
+                                a(href="#").text-uppercase
+                                    span.icon-home
+                                    label home
+                            li(@click.prevent="goSection('fixture')").option
+                                a(href="#").text-uppercase
+                                    span.icon-soccer-ball
+                                    label fixture
+                            li(@click.prevent="goSection('como-jugar')").option
+                                a(href="#").text-uppercase
+                                    span.icon-how-play
+                                    label ¿cómo jugar?
+                            li(@click.prevent="goSection('mecanica')").option
+                                a(href="#").text-uppercase
+                                    span.icon-premio
+                                    label mecánica y premios
+                            li(@click.prevent="goSection('ganadores')").option
+                                a(href="#").text-uppercase
+                                    span.icon-cup
+                                    label ganadores
+                    div.sec-social
+                        div.follow Síguenos en
+                        div.social-buttons
+                            a.text-blue-facebook.icon-facebook(href="#", @click.prevent="openNewWindow(urlShareFacebook)")
+                            a.text-blue-twitter.icon-twitter(href="#", @click.prevent="openNewWindow(urlShareTwitter)")
+                    div.links-specials.col-lg-3
+                        a(href="https://elbocon.pe/mundial/", target="_blank")
+                            figure.logo-special
+                                img(src="/mundial/polla/dist/polla/img/logo-mundial.png")
+                                //- img(src="../img/logo-mundial.png")
+                        a(href="https://elbocon.pe/mundial/trivia/", target="_blank")
+                            figure.logo-special
+                                img(src="/mundial/polla/dist/polla/img/logotrivia-gallo-mas-gallo.png")
+                                //- img(src="../img/logotrivia.png?2")

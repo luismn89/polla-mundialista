@@ -1,0 +1,3 @@
+div.list-news
+    ul
+        new.item-new(v-for="(item, index) in news", :key="item.id", :item="item", :class="{ 'first' : index === 0 }")

@@ -1,0 +1,166 @@
+@import '../../../../../static/stylus/modules/_variables.styl'
+.box-slider-groups
+    align-items center
+    display flex
+    display -ms-flexbox
+    justify-content center
+    padding 0
+    -ms-flex-align center
+    -ms-flex-pack center
+
+    .VueCarousel-navigation
+        .VueCarousel-navigation-button
+            font-size 17px
+            padding 26px 7px !important
+            font-weight bold
+            appearance none
+            background $red-btn
+            border none
+            width 30px
+            top 0
+            transform none
+            -webkit-appearance none
+            i
+                color $white
+    .VueCarousel-wrapper
+        order 2
+        overflow hidden
+        max-width 240px
+        .VueCarousel-inner
+            display flex
+            display -ms-flexbox
+            list-style none
+            .item-date
+                border-bottom 0.5px solid $red-btn
+                border-top 0.5px solid $red-btn
+                width 48px !important
+                .date
+                    margin-top 5px
+                    margin-bottom 5px
+                    p
+                        margin 0
+                .game
+                    background $gray-light3
+                    border-radius 5px
+                    margin-bottom 1px
+                div
+                    padding-left 10px
+                    padding-right 10px
+                    p
+                        font-size 14px
+                        margin 0
+                        text-align center
+                    .number
+                        font-size 17px
+            .item-date:not(:last-child)
+                .date
+                    border-right 0.5px solid $red-btn
+                .game
+                    border-right 1px solid $gray-light2
+            .item-date.disabledDate
+                p
+                    color $gray-light3
+                .game
+                    background none
+                    border-left 1px solid $gray-light2
+                    margin-top 8px
+                    height 9px
+                    border-radius 0
+                    p
+                      color white
+@media screen and (min-width: 375px)
+    .box-slider-groups
+        .VueCarousel-wrapper
+            max-width 283px
+        .VueCarousel-navigation
+            .VueCarousel-navigation-button
+                width 37px
+@media screen and (min-width: 414px)
+    .box-slider-groups
+        .VueCarousel-wrapper
+            max-width 333px
+        .VueCarousel-navigation
+            .VueCarousel-navigation-button
+                width 30px
+@media screen and (min-width: 568px)
+    .box-slider-groups
+        .VueCarousel-wrapper
+            max-width 480px
+@media screen and (min-width: 667px)
+    .box-slider-groups
+        .VueCarousel-wrapper
+            max-width 575px
+        .VueCarousel-navigation
+            .VueCarousel-navigation-button
+                width 36px
+@media screen and (min-width: 736px)
+    .box-slider-groups
+        .VueCarousel-wrapper
+            max-width 633px
+        .VueCarousel-navigation
+            .VueCarousel-navigation-button
+                width 43px
+@media screen and (min-width: 768px)
+    .box-slider-groups
+        .btn-arrow
+            font-size 24px
+            padding 26.5px 14px
+        .VueCarousel-wrapper
+            max-width 708px
+@media screen and (min-width: 1024px)
+    .box-slider-groups
+        .VueCarousel-wrapper
+            max-width 766px
+@media screen and (min-width: 1200px)
+    .box-slider-groups
+        border-left 0.5px solid $red-btn
+        border-right 0.5px solid $red-btn
+        float none
+        padding 0
+        &.final
+            .VueCarousel-inner
+                transform: translate3d(-1020px, 0px, 0px) !important
+        &.tercer-lugar
+            .VueCarousel-inner
+                transform: translate3d(-960px, 0px, 0px) !important
+        &.semifinal
+            .VueCarousel-inner
+                transform: translate3d(-780px, 0px, 0px) !important
+        &.cuartos
+            .VueCarousel-inner
+                transform: translate3d(-540px, 0px, 0px) !important
+        &.octavos
+            .VueCarousel-inner
+                transform: translate3d(-298px, 0px, 0px) !important
+        &.phases
+            .VueCarousel-inner
+                transform: translate3d(0px, 0px, 0px) !important
+        .VueCarousel-navigation
+            .VueCarousel-navigation-button
+                display none
+        .VueCarousel-wrapper
+            max-width 902px
+            .item-date
+                flex-basis 60.1px
+                div
+                    padding-left 23.2px
+                    padding-right 23.3px
+                &.selectedDate
+                &:hover
+                    background $red-btn
+                    cursor pointer
+                    p
+                        color $white
+                    .game
+                        background $red-btn
+                        border-right none !important
+                        p
+                            color $white
+            .item-date.disabledDate:hover
+                background none
+                color $gray-light3
+                cursor default
+                .game
+                    background none
+                    p
+                        color $white

@@ -1,0 +1,135 @@
+div.modal_stadistic
+    div.match-stadistic
+        p.text-uppercase.date {{ textDate }} | {{ textLast }}
+        h2.name-group.text-red.text-uppercase {{ match.group_name }}
+        div.teams-score
+            div.box-country
+                figure.flag-country
+                    img(:src="match.local_balon_url", alt="")
+                div.name-country.text-uppercase {{ match.local }}
+            div.score
+                div.markup-number
+                    p {{ scoreLocalBet }}
+                div.percente
+                    p.text-red vs
+                div.markup-number
+                    p {{ scoreVisitorBet }}
+            div.box-country
+                figure.flag-country
+                    img(:src="match.visit_balon_url", alt="")
+                div.name-country.text-uppercase {{ match.visit }}
+        p.text-uppercase.stadium {{ match.stadium_name }}, {{ match.city }}
+    div.accordion.teams-stadistic
+        div.stadistic-local-team.tab-accordion
+            input#tab-local(type="checkbox", name="tabs")
+            label(for="tab-local").text-uppercase {{ match.local }}
+            div.tab-accordion-content
+                div.container-players-team
+                    h3.text-uppercase equipo
+                    ul.list-players
+                        li.item-player(v-for="player in listPlayersLocal", :key="player.id")
+                            span(:class="[ player.rol_name == 'DT' ? 'icon-dt' : 'icon-soccer-ball' ]")
+                            p.role-player.text-uppercase.text-red {{ getPosition(player.rol_name) }}
+                            p.name-player.text-uppercase {{ player.firstname }} {{ player.last_name }}
+                div.next-matches
+                    h3.text-uppercase partidos
+                    div.item-next-match(v-for="next_match in match.others_games_local", :key="next_match.id")
+                        p.group-date-stadium.text-uppercase
+                            span.text-red {{ next_match.group_name }}
+                            |  | {{ dateNextMatch(next_match.start_date_local) }} | {{ next_match.stadium_name }}, {{ next_match.city }}
+                        div.teams-score
+                            div.box-country
+                                figure.flag-country
+                                    img(:src="next_match.local_balon_url", alt="")
+                                p.text-uppercase {{ next_match.local }}
+                            div.teams-versus
+                                p.text-uppercase.text-red {{ hourNextMatch(next_match.start_date_local) }}
+                            div.box-country
+                                p.text-uppercase {{ next_match.visit }}
+                                figure.flag-country
+                                    img(:src="next_match.visit_balon_url", alt="")
+                //- a.btn-mobile.text-white.background-red.text-uppercase apuesta ahora
+        div.stadistic-visitor-team.tab-accordion
+            input#tab-visitor(type="checkbox", name="tabs")
+            label(for="tab-visitor").text-uppercase {{ match.visit }}
+            div.tab-accordion-content
+                div.container-players-team
+                    h3.text-uppercase equipo
+                    ul.list-players
+                        li.item-player(v-for="player in listPlayersVisit", :key="player.id")
+                            span(:class="[ player.rol_name == 'DT' ? 'icon-dt' : 'icon-soccer-ball' ]")
+                            p.role-player.text-uppercase.text-red {{ getPosition(player.rol_name) }}
+                            p.name-player.text-uppercase {{ player.firstname }} {{ player.last_name }}
+                div.next-matches
+                    h3.text-uppercase partidos
+                    div.item-next-match(v-for="next_match in match.others_games_visit", :key="next_match.id")
+                        p.group-date-stadium.text-uppercase
+                            span.text-red {{ next_match.group_name }}
+                            |  | {{ dateNextMatch(next_match.start_date_local) }} | {{ next_match.stadium_name }}, {{ next_match.city }}
+                        div.teams-score
+                            div.box-country
+                                figure.flag-country
+                                    img(:src="next_match.local_balon_url", alt="")
+                                p.text-uppercase {{ next_match.local }}
+                            div.teams-versus
+                                p.text-uppercase.text-red {{ hourNextMatch(next_match.start_date_local) }}
+                            div.box-country
+                                p.text-uppercase {{ next_match.visit }}
+                                figure.flag-country
+                                    img(:src="next_match.visit_balon_url", alt="")
+                //- a.btn-mobile.text-white.background-red.text-uppercase apuesta ahora
+    div.teams-desk
+        div.columns-teams.teams-stadistic
+            div.stadistic-local-team
+                div.container-players-team
+                    h3.text-uppercase equipo
+                    ul.list-players
+                        li.item-player(v-for="player in listPlayersLocal", :key="player.id")
+                            span(:class="[ player.position == 'DT' ? 'icon-dt' : 'icon-soccer-ball' ]")
+                            p.role-player.text-uppercase.text-red {{ getPosition(player.rol_name) }}
+                            p.name-player.text-uppercase {{ player.firstname }} {{ player.last_name }}
+            div.stadistic-visitor-team
+                div.container-players-team
+                    h3.text-uppercase equipo
+                    ul.list-players
+                        li.item-player(v-for="player in listPlayersVisit", :key="player.id")
+                            span(:class="[ player.position == 'DT' ? 'icon-dt' : 'icon-soccer-ball' ]")
+                            p.role-player.text-uppercase.text-red {{ getPosition(player.rol_name) }}
+                            p.name-player.text-uppercase {{ player.firstname }} {{ player.last_name }}
+        div.columns-teams.teams-stadistic
+            div.stadistic-local-team
+                div.next-matches
+                    h3.text-uppercase partidos
+                    div.item-next-match(v-for="next_match in match.others_games_local", :key="next_match.id")
+                        p.group-date-stadium.text-uppercase
+                            span.text-red {{ next_match.group_name }}
+                            |  | {{ dateNextMatch(next_match.start_date_local) }} | {{ next_match.stadium_name }}, {{ next_match.city }}
+                        div.teams-score
+                            div.box-country
+                                figure.flag-country
+                                    img(:src="next_match.local_balon_url", alt="")
+                                p.text-uppercase {{ next_match.local }}
+                            div.teams-versus
+                                p.text-uppercase.text-red {{ hourNextMatch(next_match.start_date_local) }}
+                            div.box-country
+                                p.text-uppercase {{ next_match.visit }}
+                                figure.flag-country
+                                    img(:src="next_match.visit_balon_url", alt="")
+            div.stadistic-visitor-team
+                div.next-matches
+                    h3.text-uppercase partidos
+                    div.item-next-match(v-for="next_match in match.others_games_visit", :key="next_match.id")
+                        p.group-date-stadium.text-uppercase
+                            span.text-red {{ next_match.group_name }}
+                            |  | {{ dateNextMatch(next_match.start_date_local) }} | {{ next_match.stadium_name }}, {{ next_match.city }}
+                        div.teams-score
+                            div.box-country
+                                figure.flag-country
+                                    img(:src="next_match.local_balon_url", alt="")
+                                p.text-uppercase {{ next_match.local }}
+                            div.teams-versus
+                                p.text-uppercase.text-red {{ hourNextMatch(next_match.start_date_local) }}
+                            div.box-country
+                                p.text-uppercase {{ next_match.visit }}
+                                figure.flag-country
+                                    img(:src="next_match.visit_balon_url", alt="")
