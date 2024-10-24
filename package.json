@@ -16,7 +16,7 @@
   "dependencies": {
     "js-cookie": "2.2.0",
     "superagent": "3.8.3",
-    "vue": "2.5.16",
+    "vue": "3.0.0",
     "vue-agile": "^0.3.7",
     "vue-carousel": "^0.7.3",
     "vue-recaptcha": "1.1.1",
